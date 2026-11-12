@@ -1,0 +1,8 @@
+source commit: 32b3cf39b49b34d906693dfa43539d42886b562b
+command: python3 -I scripts/count_ops.py /private/tmp/claude-501/-Users-prak-git-aws-emulator-lab/bde8facd-71c8-4290-b55e-40b0bed86e8f/scratchpad/src2 results/ver3-20261112T232814Z
+script sha256: 39cd75ba94dc0aafc149e57742ef83a24b277f22d4f54177ab866ff62f145dc6
+python: 3.15.2 on macOS-27.0.1-arm64-arm-64bit-Mach-O
+services: 436
+totals: {'total': 19451, 'implemented': 11224, 'scaffolded': 8172, 'unwired': 55}
+consistency problems: 1
+  service-com-amazonaws-healthlake-healthlake: OPERATIONS.md says 26, model has 28

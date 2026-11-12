@@ -1,0 +1,9 @@
+#!/bin/sh
+# Check out the emulator source at the pinned commit into a new directory: bin/fetch-source <dir>
+set -eu
+[ $# -eq 1 ] || { echo "usage: $0 <new-dir>" >&2; exit 2; }
+[ ! -e "$1" ] || { echo "$1 exists; pass a new location" >&2; exit 2; }
+commit=$(cat "$(dirname "$0")/../pinned-commit")
+git clone -q --filter=blob:none --no-checkout https://github.com/aws/aws-emulator.git "$1"
+git -C "$1" checkout -q "$commit"
+git -C "$1" rev-parse HEAD

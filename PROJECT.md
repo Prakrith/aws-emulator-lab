@@ -28,7 +28,7 @@ Status is `open`, `satisfied`, `not satisfied`, `not applicable: <reason>`, or `
 |---|---|---|---|---|---|
 | VER-1 | Verification | R-1 | Rebuild the image from the recorded Dockerfile in a clean Docker context. Compare `aws-emulator -v` with the pinned version. Confirm the startup line reports telemetry disabled and that `docker port` shows only `127.0.0.1`. | `Dockerfile`, `bin/`, task aws-emulator-lab-de5 notes | `satisfied` |
 | VER-2 | Verification | R-2 | Run AWS's `fidelity-tests-runner` against the pinned build and summarize scores by service. Record the runner version and every service it does not cover. | | `open` |
-| VER-3 | Verification | R-3 | For each service crate at the pinned commit, count operations in the Smithy model and those marked `SCAFFOLDED, NOT IMPLEMENTED:` in the source. Record the command and the counts. | | `open` |
+| VER-3 | Verification | R-3 | For each service crate at the pinned commit, count operations in the Smithy model and those marked `SCAFFOLDED, NOT IMPLEMENTED:` in the source. Record the command and the counts. | `scripts/count_ops.py`, `results/ver3-*`, task aws-emulator-lab-d1w notes | `satisfied` |
 | VER-4 | Verification | R-4 | Run the smoke-test harness for each core service on a fresh emulator. Record each operation as works, 501, or error. | | `open` |
 | VER-5 | Verification | R-5 | A reviewer that is not Claude Code reads the project record, results and harness read-only and reports findings. Record the findings and what was done about each. | | `open` |
 | VAL-1 | Validation | Intended use | The owner reads the results table and ranked list and judges whether they say which services to learn on the emulator. | | `open` |

@@ -26,7 +26,7 @@ Status is `open`, `satisfied`, `not satisfied`, `not applicable: <reason>`, or `
 
 | ID | Type | Traces to | Method | Evidence | Status |
 |---|---|---|---|---|---|
-| VER-1 | Verification | R-1 | Rebuild the image from the recorded Dockerfile in a clean Docker context. Compare `aws-emulator -v` with the pinned version. Confirm the startup line reports telemetry disabled and that `docker port` shows only `127.0.0.1`. | | `open` |
+| VER-1 | Verification | R-1 | Rebuild the image from the recorded Dockerfile in a clean Docker context. Compare `aws-emulator -v` with the pinned version. Confirm the startup line reports telemetry disabled and that `docker port` shows only `127.0.0.1`. | `Dockerfile`, `bin/`, task aws-emulator-lab-de5 notes | `satisfied` |
 | VER-2 | Verification | R-2 | Run AWS's `fidelity-tests-runner` against the pinned build and summarize scores by service. Record the runner version and every service it does not cover. | | `open` |
 | VER-3 | Verification | R-3 | For each service crate at the pinned commit, count operations in the Smithy model and those marked `SCAFFOLDED, NOT IMPLEMENTED:` in the source. Record the command and the counts. | | `open` |
 | VER-4 | Verification | R-4 | Run the smoke-test harness for each core service on a fresh emulator. Record each operation as works, 501, or error. | | `open` |
@@ -44,6 +44,7 @@ Not yet produced. VER-1, VER-2, VER-3 and VER-4 each need a recorded commit, com
 State what holds now. Delete a superseded decision. Record a decision only if it is hard to reverse or would surprise a later reader.
 
 - The emulator runs in Docker through Colima on macOS, because it runs natively only on Linux.
+- The pin is v1.0.338 (commit `32b3cf3`), fixed by SHA-256 of the package and the signing key in the Dockerfile. The vendor's `latest` URL serves only the newest build, so a rebuild fails once a newer version is published. v1.0.336, used for the earlier vetting, is not rebuildable.
 - Telemetry stays off, and real AWS credentials and `AWS_PROFILE` are cleared before the CLI is pointed at the emulator.
 - Results are specific to the pinned version. The emulator releases several times a day.
 
@@ -54,7 +55,7 @@ Status is `open`, `closed`, `deferred: <reason>`, or `accepted` as a limitation.
 | ID | Item | Status |
 |---|---|---|
 | U-1 | A gap titled "Lambda Invoke refuses every real invocation with NotImplemented" is filed. Current status is unknown. | `open` |
-| U-2 | Batch jobs fail with "This emulator does not run containers". Observed 2026-11-12 on v1.0.336. | `accepted` |
+| U-2 | Batch jobs fail with "This emulator does not run containers". Observed 2026-11-12 on v1.0.336, not yet rechecked on the pinned v1.0.338. | `accepted` |
 | U-3 | The emulator does not evaluate IAM, bucket or key policies, so results say nothing about authorization. | `accepted` |
 | U-4 | It is unknown whether `fidelity-tests-runner` installs and runs on this machine without extra tooling. | `open` |
 | U-5 | Outbound network connections made by the emulator were not checked. | `open` |

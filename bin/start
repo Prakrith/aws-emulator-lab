@@ -1,0 +1,11 @@
+#!/bin/sh
+# Start the emulator with telemetry off, the port on 127.0.0.1 only and 2 GB of memory.
+set -eu
+NAME=${EMULATOR_CONTAINER:-aws-emulator}
+PORT=${EMULATOR_PORT:-9297}
+docker rm -f "$NAME" >/dev/null 2>&1 || true
+docker run -d --name "$NAME" \
+  -e EMULATOR_TELEMETRY=off \
+  -p "127.0.0.1:${PORT}:9297" \
+  --memory 2g \
+  aws-emulator:pinned

@@ -1,0 +1,7 @@
+{
+  "database": "dolt",
+  "backend": "dolt",
+  "dolt_mode": "embedded",
+  "dolt_database": "aws_emulator_lab",
+  "project_id": "77345081-471a-40f0-ae1f-2bd084439d03"
+}

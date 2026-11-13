@@ -63,4 +63,6 @@ Status is `open`, `closed`, `deferred: <reason>`, or `accepted` as a limitation.
 
 ## Acceptance
 
-Accepted commit: none
+Accepted 2026-11-13 by the owner: the ranking serves as a no-spend first step for learning service operations.
+
+Accepted commit: `0abbc71`

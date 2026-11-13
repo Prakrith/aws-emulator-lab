@@ -31,7 +31,7 @@ Status is `open`, `satisfied`, `not satisfied`, `not applicable: <reason>`, or `
 | VER-3 | Verification | R-3 | For each service crate at the pinned commit, count operations in the Smithy model and those marked `SCAFFOLDED, NOT IMPLEMENTED:` in the source. Record the command and the counts. | `scripts/count_ops.py`, `results/ver3-*`, task aws-emulator-lab-d1w notes | `satisfied` |
 | VER-4 | Verification | R-4 | Run the smoke-test harness for each core service on a fresh emulator. Record each operation as works, 501, or error. | `scripts/smoke.py`, `results/ver4-20261113T102029Z/`, task aws-emulator-lab-ffc notes | `satisfied` |
 | VER-5 | Verification | R-5 | A reviewer that is not Claude Code reads the project record, results and harness read-only and reports findings. Record the findings and what was done about each. | task aws-emulator-lab-8pj notes | `satisfied` |
-| VAL-1 | Validation | Intended use | The owner reads the results table and ranked list and judges whether they say which services to learn on the emulator. | | `open` |
+| VAL-1 | Validation | Intended use | The owner reads the results table and ranked list and judges whether they say which services to learn on the emulator. | Owner judged 2026-11-13 that the ranking serves as a no-spend first step for learning operations, before choosing whether to deploy low-cost infrastructure on real AWS. Task aws-emulator-lab-73v notes | `satisfied` |
 
 ## Reproducible results
 

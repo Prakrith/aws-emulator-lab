@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "kinesis.resource-policy-put-get-delete-lifecycle",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_resource_policy_put_get_delete_lifecycle.py\", line 72, in run\n    assert second_delete_message == expected_message, (\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: double DeleteResourcePolicy message 'Policy for resource arn:aws:kinesis:us-west-2:000000000000:stream/sim2real-behav-kpol-4b3f1f01a02b under account 000000000000 not found.', expected 'No resource policy found for resource ARN arn:aws:kinesis:us-west-2:000000000000:stream/sim2real-behav-kpol-4b3f1f01a02b.'",
+    "duration_ms": 3148.8,
+    "kind": "failed",
+    "service": "kinesis",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert second_delete_message == expected_message, (",
+      "statement": 20
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_resource_policy_put_get_delete_lifecycle.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

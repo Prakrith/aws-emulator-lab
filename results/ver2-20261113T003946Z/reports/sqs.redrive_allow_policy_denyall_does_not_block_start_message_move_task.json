@@ -1,0 +1,23 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "sqs.redrive-allow-policy-denyall-does-not-block-start-message-move-task",
+    "detail": null,
+    "duration_ms": 5149.1,
+    "kind": "passed",
+    "service": "sqs",
+    "verdict": "passed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_redrive_allow_policy_denyall_does_not_block_start_message_move_task.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "ec2.op-contract-describeInstanceTopology",
+    "detail": "File \"context.py\", line 123, in wrapper\n    return func(*args, **kwargs)\n  File \"client.py\", line 1094, in _make_api_call\n    raise error_class(parsed_response, operation_name)\nbotocore.exceptions.ClientError: An error occurred (NotImplemented) when calling the DescribeInstanceTopology operation: operation DescribeInstanceTopology is scaffolded but not implemented in this emulator",
+    "duration_ms": 185.3,
+    "kind": "not_implemented",
+    "service": "ec2",
+    "site": {
+      "error_code": "NotImplemented",
+      "error_operation": "DescribeInstanceTopology",
+      "error_status": 501,
+      "exception": "ClientError",
+      "function": "run",
+      "source": "resp = ec2.describe_instance_topology(InstanceIds=[instance_id])",
+      "statement": 6
+    },
+    "verdict": "error"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_op_contract_describe_instance_topology.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "lambda.extension-that-never-registers-fails-the-invoke",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_extension_that_never_registers_fails_the_invoke.py\", line 62, in run\n    assert bad[\"status\"] == 200 and bad[\"error\"] == \"Unhandled\", (\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: never-registering extension: status=200 FunctionError=None raw=b'{\"ok\": true}'",
+    "duration_ms": 2221.5,
+    "kind": "failed",
+    "service": "lambda",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert bad[\"status\"] == 200 and bad[\"error\"] == \"Unhandled\", (",
+      "statement": 8
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_extension_that_never_registers_fails_the_invoke.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

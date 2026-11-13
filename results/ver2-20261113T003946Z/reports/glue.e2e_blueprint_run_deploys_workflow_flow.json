@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "glue.e2e-blueprint-run-deploys-workflow-flow",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_e2e_blueprint_run_deploys_workflow_flow.py\", line 77, in run\n    assert job_nodes, f\"blueprint-generated workflow has no job node: {workflow['Workflow']['Graph']}\"\n           ^^^^^^^^^\nAssertionError: blueprint-generated workflow has no job node: {'Nodes': [], 'Edges': []}",
+    "duration_ms": 20296.4,
+    "kind": "failed",
+    "service": "glue",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert job_nodes, f\"blueprint-generated workflow has no job node: {workflow['Workflow']['Graph']}\"",
+      "statement": 25
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_e2e_blueprint_run_deploys_workflow_flow.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

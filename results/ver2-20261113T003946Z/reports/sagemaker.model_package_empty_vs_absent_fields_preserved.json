@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "sagemaker.model-package-empty-vs-absent-fields-preserved",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_model_package_empty_vs_absent_fields_preserved.py\", line 40, in run\n    assert \"ModelPackageDescription\" not in empty_direct, (\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: expected an explicit empty-string description to be normalized away (not stored) for arn:aws:sagemaker:us-west-2:000000000000:model-package/sim2real-mpg-2916713ba206/1, got ''",
+    "duration_ms": 98.2,
+    "kind": "failed",
+    "service": "sagemaker",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert \"ModelPackageDescription\" not in empty_direct, (",
+      "statement": 11
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_model_package_empty_vs_absent_fields_preserved.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

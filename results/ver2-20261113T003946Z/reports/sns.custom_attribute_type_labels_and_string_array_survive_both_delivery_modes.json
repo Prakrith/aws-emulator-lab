@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "sns.custom-attribute-type-labels-and-string-array-survive-both-delivery-modes",
+    "detail": "File \"context.py\", line 123, in wrapper\n    return func(*args, **kwargs)\n  File \"client.py\", line 1094, in _make_api_call\n    raise error_class(parsed_response, operation_name)\nbotocore.errorfactory.InvalidParameterValueException: An error occurred (ParameterValueInvalid) when calling the Publish operation: The message attribute 'loose' with type 'String.Array' must carry a JSON array of strings, numbers, true, false and null.",
+    "duration_ms": 97.5,
+    "kind": "target_error",
+    "service": "sns",
+    "site": {
+      "error_code": "ParameterValueInvalid",
+      "error_operation": "Publish",
+      "error_status": 400,
+      "exception": "InvalidParameterValueException",
+      "function": "run",
+      "source": "resp = sns.publish(TopicArn=topic_arn, Message=marker, Subject=\"labels\", MessageAttributes=attrs)",
+      "statement": 12
+    },
+    "verdict": "error"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_custom_attribute_type_labels_and_string_array_survive_both_delivery_modes.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

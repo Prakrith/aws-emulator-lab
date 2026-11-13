@@ -1,0 +1,23 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "iam.deploy-iam-user-with-inline-policy-via-cloudformation",
+    "detail": null,
+    "duration_ms": 10169.1,
+    "kind": "passed",
+    "service": "iam",
+    "verdict": "passed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_deploy_iam_user_with_inline_policy_via_cloudformation.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

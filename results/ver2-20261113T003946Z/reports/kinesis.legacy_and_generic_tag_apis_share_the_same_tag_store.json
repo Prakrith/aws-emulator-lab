@@ -1,0 +1,23 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "kinesis.legacy-and-generic-tag-apis-share-the-same-tag-store",
+    "detail": null,
+    "duration_ms": 2118.6,
+    "kind": "passed",
+    "service": "kinesis",
+    "verdict": "passed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_legacy_and_generic_tag_apis_share_the_same_tag_store.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

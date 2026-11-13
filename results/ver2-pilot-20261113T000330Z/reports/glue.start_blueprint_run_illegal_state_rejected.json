@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "glue.start-blueprint-run-illegal-state-rejected",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_start_blueprint_run_illegal_state_rejected.py\", line 61, in run\n    assert final_status == \"FAILED\", f\"expected the blueprint to settle on FAILED, got {final_status!r}\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: expected the blueprint to settle on FAILED, got 'ACTIVE'",
+    "duration_ms": 5223.8,
+    "kind": "failed",
+    "service": "glue",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert final_status == \"FAILED\", f\"expected the blueprint to settle on FAILED, got {final_status!r}\"",
+      "statement": 16
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_start_blueprint_run_illegal_state_rejected.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

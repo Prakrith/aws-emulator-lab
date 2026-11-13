@@ -1,0 +1,23 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "lambda.python-remaining-time-is-bounded-by-the-configured-timeout",
+    "detail": null,
+    "duration_ms": 6453.2,
+    "kind": "passed",
+    "service": "lambda",
+    "verdict": "passed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_python_remaining_time_is_bounded_by_the_configured_timeout.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

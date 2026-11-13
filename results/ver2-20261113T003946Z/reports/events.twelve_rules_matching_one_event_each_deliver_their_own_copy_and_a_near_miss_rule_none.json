@@ -1,0 +1,23 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "events.twelve-rules-matching-one-event-each-deliver-their-own-copy-and-a-near-miss-rule-none",
+    "detail": null,
+    "duration_ms": 15230.9,
+    "kind": "passed",
+    "service": "events",
+    "verdict": "passed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_twelve_rules_matching_one_event_each_deliver_their_own_copy_and_a_near_miss_rule_none.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

@@ -1,0 +1,35 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "ecs.start-task-batch-partial-failure",
+    "cleanup_detail": "teardown ran while the timed-out test was still running",
+    "cleanup_failed": false,
+    "cleanup_ms": 10095.7,
+    "detail": "Check timed out after 60.0s",
+    "duration_ms": 60008.3,
+    "kind": "timeout",
+    "service": "ecs",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "Timeout",
+      "function": "_poll_until",
+      "source": "time.sleep(interval_s)",
+      "statement": 5
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_start_task_batch_partial_failure.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

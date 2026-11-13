@@ -1,0 +1,23 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "sts.get-session-token-expiration-timestamp-precision-preserved",
+    "detail": null,
+    "duration_ms": 104.8,
+    "kind": "passed",
+    "service": "sts",
+    "verdict": "passed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_get_session_token_expiration_timestamp_precision_preserved.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "dynamodb.set-arithmetic-grouping-size-utf16-and-add-empty-string-to-set",
+    "detail": "File \"context.py\", line 123, in wrapper\n    return func(*args, **kwargs)\n  File \"client.py\", line 1094, in _make_api_call\n    raise error_class(parsed_response, operation_name)\nbotocore.exceptions.ClientError: An error occurred (ValidationException) when calling the UpdateItem operation: 1 validation error detected: Invalid UpdateExpression: Syntax error; token: \"(\", near: \"= (n\"",
+    "duration_ms": 3106.8,
+    "kind": "target_error",
+    "service": "dynamodb",
+    "site": {
+      "error_code": "ValidationException",
+      "error_operation": "UpdateItem",
+      "error_status": 400,
+      "exception": "ClientError",
+      "function": "run",
+      "source": "updated = ddb.update_item(",
+      "statement": 7
+    },
+    "verdict": "error"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_set_arithmetic_grouping_size_utf16_and_add_empty_string_to_set.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

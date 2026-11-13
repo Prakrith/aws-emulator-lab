@@ -1,0 +1,23 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "dynamodb.partiql-ordering-binary-byte-order-and-string-number-cross-type-match",
+    "detail": null,
+    "duration_ms": 3097.2,
+    "kind": "passed",
+    "service": "dynamodb",
+    "verdict": "passed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_partiql_ordering_binary_byte_order_and_string_number_cross_type_match.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

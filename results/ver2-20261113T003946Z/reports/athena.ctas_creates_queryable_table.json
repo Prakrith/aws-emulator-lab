@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "athena.ctas-creates-queryable-table",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_ctas_creates_queryable_table.py\", line 50, in run\n    assert ctas_exec[\"Status\"][\"State\"] == \"SUCCEEDED\", ctas_exec[\"Status\"]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: {'State': 'FAILED', 'StateChangeReason': 'near \"WITH\": syntax error in CREATE TABLE sim2real_athena_ctasdb_7426e9f32282.sim2real_athena_tbl_1a0642a85d78 WITH (format=\\'PARQUET\\', external_location=\\'s3://sim2real-athena-out-f189ae9d0851/ctas/sim2real_athena_tbl_1a0642a85d78/\\') AS SELECT 42 AS num, \\'hello\\' AS txt at offset 82', 'SubmissionDateTime': datetime.datetime(2026, 11, 12, 21, 2, 59, 283659, tzinfo=tzlocal()), 'CompletionDateTime': datetime.datetime(2026, 11, 12, 21, 3, 2, 283659, tzinfo=tzlocal()), 'AthenaError': {'ErrorCategory': 2, 'Retryable': False, 'ErrorMessage': 'near \"WITH\": syntax error in CREATE TABLE sim2real_athena_ctasdb_7426e9f32282.sim2real_athena_tbl_1a0642a85d78 WITH (format=\\'PARQUET\\', external_location=\\'s3://sim2real-athena-out-f189ae9d0851/ctas/sim2real_athena_tbl_1a0642a85d78/\\') AS SELECT 42 AS num, \\'hello\\' AS txt at offset 82'}}",
+    "duration_ms": 8203.1,
+    "kind": "failed",
+    "service": "athena",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert ctas_exec[\"Status\"][\"State\"] == \"SUCCEEDED\", ctas_exec[\"Status\"]",
+      "statement": 14
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_ctas_creates_queryable_table.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

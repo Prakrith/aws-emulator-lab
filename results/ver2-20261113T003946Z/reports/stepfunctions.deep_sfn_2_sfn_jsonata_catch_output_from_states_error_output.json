@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "stepfunctions.deep-sfn-2-sfn-jsonata-catch-output-from-states-error-output",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_deep_sfn_2_sfn_jsonata_catch_output_from_states_error_output.py\", line 69, in run\n    assert exe[\"status\"] == \"SUCCEEDED\", (\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: the Catch did not recover the execution: 'FAILED' error='DynamoDB.ResourceNotFoundException' cause='Requested resource not found (Service: AmazonDynamoDBv2; Status Code: 400; Error Code: ResourceNotFoundException; Request ID: AF2TRJX11ZOKQDMU85YVMLVSZT45AOZOGZY9HVXMD9GUBJ0N0TQJ; Proxy: null)'",
+    "duration_ms": 1187.0,
+    "kind": "failed",
+    "service": "stepfunctions",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert exe[\"status\"] == \"SUCCEEDED\", (",
+      "statement": 8
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_deep_sfn_2_sfn_jsonata_catch_output_from_states_error_output.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "ec2.op-contract-modify-subnet-attribute",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_op_contract_modify_subnet_attribute.py\", line 43, in run\n    assert err_msg == \"Only one subnet attribute can be modified at a time. Provided attributes: [assignIpv6AddressOnCreation, mapPublicIpOnLaunch]\", err_msg\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Only one attribute can be modified at a time, and this request names AssignIpv6AddressOnCreation, MapPublicIpOnLaunch. Use separate requests for each attribute.",
+    "duration_ms": 124.7,
+    "kind": "failed",
+    "service": "ec2",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert err_msg == \"Only one subnet attribute can be modified at a time. Provided attributes: [assignIpv6AddressOnCreation, mapPublicIpOnLaunch]\", err_msg",
+      "statement": 12
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_op_contract_modify_subnet_attribute.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

@@ -1,0 +1,23 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "sqs.fifo-message-group-held-by-one-concurrent-receiver-at-a-time",
+    "detail": null,
+    "duration_ms": 3214.8,
+    "kind": "passed",
+    "service": "sqs",
+    "verdict": "passed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_fifo_message_group_held_by_one_concurrent_receiver_at_a_time.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

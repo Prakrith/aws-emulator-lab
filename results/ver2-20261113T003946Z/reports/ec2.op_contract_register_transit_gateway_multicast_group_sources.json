@@ -1,0 +1,35 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "ec2.op-contract-register-transit-gateway-multicast-group-sources",
+    "cleanup_detail": "cleanup failed: RuntimeError(\"2 teardown(s) failed: ClientError('An error occurred (NotImplemented) when calling the DeleteTransitGatewayVpcAttachment operation: operation DeleteTransitGatewayVpcAttachment is scaffolded but not implemented in this emulator'); ClientError('An error occurred (IncorrectState) when calling the DeleteTransitGateway operation: tgw-0000000000000009f has non-deleted Transit Gateway Attachments and cannot be deleted.')\")",
+    "cleanup_failed": true,
+    "cleanup_ms": 21.8,
+    "detail": "File \"context.py\", line 123, in wrapper\n    return func(*args, **kwargs)\n  File \"client.py\", line 1094, in _make_api_call\n    raise error_class(parsed_response, operation_name)\nbotocore.exceptions.ClientError: An error occurred (NotImplemented) when calling the CreateTransitGatewayMulticastDomain operation: operation CreateTransitGatewayMulticastDomain is scaffolded but not implemented in this emulator",
+    "duration_ms": 20276.3,
+    "kind": "not_implemented",
+    "service": "ec2",
+    "site": {
+      "error_code": "NotImplemented",
+      "error_operation": "CreateTransitGatewayMulticastDomain",
+      "error_status": 501,
+      "exception": "ClientError",
+      "function": "run",
+      "source": "domain_id = ec2.create_transit_gateway_multicast_domain(",
+      "statement": 15
+    },
+    "verdict": "error"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_op_contract_register_transit_gateway_multicast_group_sources.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

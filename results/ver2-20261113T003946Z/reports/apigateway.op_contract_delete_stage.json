@@ -1,0 +1,35 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "apigateway.op-contract-delete-stage",
+    "cleanup_detail": "cleanup failed: RuntimeError(\"1 teardown(s) failed: BadRequestException('An error occurred (BadRequestException) when calling the DeleteUsagePlan operation: Cannot delete Usage Plan 3pzlwequrz because there are API Stages associated with it, including eocd2yo7iw:prod')\")",
+    "cleanup_failed": true,
+    "cleanup_ms": 2.6,
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_op_contract_delete_stage.py\", line 65, in run\n    assert not any(\n           ^^^^^^^^\n        s.get(\"apiId\") == api_id and s.get(\"stage\") == \"prod\" for s in plan_after.get(\"apiStages\", [])\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ), \"expected the usage plan's stale apiStage reference to be cascaded away\"\n    ^\nAssertionError: expected the usage plan's stale apiStage reference to be cascaded away",
+    "duration_ms": 81.1,
+    "kind": "failed",
+    "service": "apigateway",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert not any(",
+      "statement": 22
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_op_contract_delete_stage.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

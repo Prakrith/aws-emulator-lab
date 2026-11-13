@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "sts.get-access-key-info-returns-correct-account",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_get_access_key_info_returns_correct_account.py\", line 25, in run\n    assert access_key_id.startswith(\"ASIA\"), (\n           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^\nAssertionError: expected a temporary (ASIA) access key id from GetSessionToken, got 'EMUL'",
+    "duration_ms": 100.8,
+    "kind": "failed",
+    "service": "sts",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert access_key_id.startswith(\"ASIA\"), (",
+      "statement": 6
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_get_access_key_info_returns_correct_account.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

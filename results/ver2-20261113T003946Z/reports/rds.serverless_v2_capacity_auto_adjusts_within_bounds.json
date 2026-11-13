@@ -1,0 +1,35 @@
+{
+  "check": {
+    "budget_s": 600.0,
+    "check_id": "rds.serverless-v2-capacity-auto-adjusts-within-bounds",
+    "cleanup_detail": "teardown ran while the timed-out test was still running",
+    "cleanup_failed": false,
+    "cleanup_ms": 15089.0,
+    "detail": "Check timed out after 600.0s",
+    "duration_ms": 600008.6,
+    "kind": "timeout",
+    "service": "rds",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "Timeout",
+      "function": "_poll_capacity_metric",
+      "source": "time.sleep(30)",
+      "statement": 16
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_serverless_v2_capacity_auto_adjusts_within_bounds.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "ec2.op-contract-get-instance-tpm-ek-pub",
+    "detail": "File \"check_op_contract_get_instance_tpm_ek_pub.py\", line 29, in run\n    image_id = _latest_nitrotpm_windows_ami(ec2)\n  File \"check_op_contract_get_instance_tpm_ek_pub.py\", line 56, in _latest_nitrotpm_windows_ami\n    assert images, (\n           ^^^^^^\nAssertionError: no NitroTPM-preconfigured Windows AMI (name pattern 'TPM-Windows_Server-*', owned by amazon) found in this region to test against",
+    "duration_ms": 110.5,
+    "kind": "failed",
+    "service": "ec2",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "_latest_nitrotpm_windows_ami",
+      "source": "assert images, (",
+      "statement": 2
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_op_contract_get_instance_tpm_ek_pub.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

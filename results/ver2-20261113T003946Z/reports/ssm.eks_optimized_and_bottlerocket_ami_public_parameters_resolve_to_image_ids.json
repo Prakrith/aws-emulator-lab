@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "ssm.eks-optimized-and-bottlerocket-ami-public-parameters-resolve-to-image-ids",
+    "detail": "File \"context.py\", line 123, in wrapper\n    return func(*args, **kwargs)\n  File \"client.py\", line 1094, in _make_api_call\n    raise error_class(parsed_response, operation_name)\nbotocore.errorfactory.ParameterNotFound: An error occurred (ParameterNotFound) when calling the GetParameter operation:",
+    "duration_ms": 72.5,
+    "kind": "target_error",
+    "service": "ssm",
+    "site": {
+      "error_code": "ParameterNotFound",
+      "error_operation": "GetParameter",
+      "error_status": 400,
+      "exception": "ParameterNotFound",
+      "function": "run",
+      "source": "param = ssm.get_parameter(Name=name)[\"Parameter\"]",
+      "statement": 2
+    },
+    "verdict": "error"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_eks_optimized_and_bottlerocket_ami_public_parameters_resolve_to_image_ids.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

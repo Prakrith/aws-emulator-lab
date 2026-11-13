@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "lambda.dotnet-constructor-exception-wrapped-as-target-invocation-exception",
+    "detail": "File \"context.py\", line 123, in wrapper\n    return func(*args, **kwargs)\n  File \"client.py\", line 1094, in _make_api_call\n    raise error_class(parsed_response, operation_name)\nbotocore.errorfactory.InvalidRuntimeException: An error occurred (InvalidRuntimeException) when calling the Invoke operation (reached max retries: 3): The runtime dotnet10 is not supported by this emulator, which runs the Python and node runtimes.",
+    "duration_ms": 5445.5,
+    "kind": "target_error",
+    "service": "lambda",
+    "site": {
+      "error_code": "InvalidRuntimeException",
+      "error_operation": "Invoke",
+      "error_status": 502,
+      "exception": "InvalidRuntimeException",
+      "function": "_raw_invoke",
+      "source": "resp = lam.invoke(**kwargs)",
+      "statement": 8
+    },
+    "verdict": "error"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_dotnet_constructor_exception_wrapped_as_target_invocation_exception.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

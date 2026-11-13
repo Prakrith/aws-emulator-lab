@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "events.sqs-target-message-group-id-json-path-resolves-per-event",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_sqs_target_message_group_id_json_path_resolves_per_event.py\", line 151, in run\n    assert first == \"sim2real-group-alpha\", (\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: first message's MessageGroupId was '$.detail.group', expected the event's own detail.group value 'sim2real-group-alpha'",
+    "duration_ms": 96.5,
+    "kind": "failed",
+    "service": "events",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert first == \"sim2real-group-alpha\", (",
+      "statement": 20
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_sqs_target_message_group_id_json_path_resolves_per_event.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

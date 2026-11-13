@@ -1,0 +1,23 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "batch.job-queue-snapshot-reflects-pending-job",
+    "detail": null,
+    "duration_ms": 9190.1,
+    "kind": "passed",
+    "service": "batch",
+    "verdict": "passed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_job_queue_snapshot_reflects_pending_job.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

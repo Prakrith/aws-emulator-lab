@@ -1,0 +1,23 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "ecr.describe-registry-reflects-replication-config",
+    "detail": null,
+    "duration_ms": 93.2,
+    "kind": "passed",
+    "service": "ecr",
+    "verdict": "passed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_describe_registry_reflects_replication_config.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

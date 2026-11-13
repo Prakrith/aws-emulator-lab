@@ -1,0 +1,23 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "stepfunctions.test-state-assign-returns-variables-in-inspection-data",
+    "detail": null,
+    "duration_ms": 63.6,
+    "kind": "passed",
+    "service": "stepfunctions",
+    "verdict": "passed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_test_state_assign_returns_variables_in_inspection_data.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

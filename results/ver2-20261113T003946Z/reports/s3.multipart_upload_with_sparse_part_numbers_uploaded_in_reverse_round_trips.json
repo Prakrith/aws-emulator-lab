@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "s3.multipart-upload-with-sparse-part-numbers-uploaded-in-reverse-round-trips",
+    "detail": "File \"check_multipart_upload_with_sparse_part_numbers_uploaded_in_reverse_round_trips.py\", line 80, in run\n    fetched = _fetch(ctx, url)\n  File \"check_multipart_upload_with_sparse_part_numbers_uploaded_in_reverse_round_trips.py\", line 95, in _fetch\n    raise AssertionError(\n    ...<2 lines>...\n    ) from exc\nAssertionError: DATAPLANE_UNIMPLEMENTED: the presigned GET URL did not serve the object: HTTPError: HTTP Error 403: Forbidden",
+    "duration_ms": 319.2,
+    "kind": "failed",
+    "service": "s3",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "_fetch",
+      "source": "raise AssertionError(",
+      "statement": 30
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_multipart_upload_with_sparse_part_numbers_uploaded_in_reverse_round_trips.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

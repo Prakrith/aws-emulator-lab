@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "sqs.query-compatible-error-carriers-differ-by-consumer-rejected",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_query_compatible_error_carriers_differ_by_consumer_rejected.py\", line 306, in run\n    assert headers_off.get(\"x-amzn-query-error\") == f\"{_LEGACY_ABSENT};Sender\", (\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: SQS omitted x-amzn-query-error when the request carried no x-amzn-query-mode; measured, it sends it regardless. headers {'content-type': 'application/x-amz-json-1.0', 'content-length': '96', 'date': 'Fri, 13 Nov 2026 00:04:14 GMT'}",
+    "duration_ms": 1270.2,
+    "kind": "failed",
+    "service": "sqs",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert headers_off.get(\"x-amzn-query-error\") == f\"{_LEGACY_ABSENT};Sender\", (",
+      "statement": 59
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_query_compatible_error_carriers_differ_by_consumer_rejected.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

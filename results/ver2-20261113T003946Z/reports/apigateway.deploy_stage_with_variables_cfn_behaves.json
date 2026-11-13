@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "apigateway.deploy-stage-with-variables-cfn-behaves",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_deploy_stage_with_variables_cfn_behaves.py\", line 88, in run\n    assert method_settings is not None, f\"no methodSettings for cached/GET: {stage.get('methodSettings')}\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: no methodSettings for cached/GET: {'~1cached/GET': {'metricsEnabled': False, 'dataTraceEnabled': False, 'throttlingBurstLimit': 5000, 'throttlingRateLimit': 10000.0, 'cachingEnabled': True, 'cacheTtlInSeconds': 300, 'cacheDataEncrypted': False, 'requireAuthorizationForCacheControl': True, 'unauthorizedCacheControlHeaderStrategy': 'SUCCEED_WITH_RESPONSE_HEADER'}}",
+    "duration_ms": 2168.1,
+    "kind": "failed",
+    "service": "apigateway",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert method_settings is not None, f\"no methodSettings for cached/GET: {stage.get('methodSettings')}\"",
+      "statement": 9
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_deploy_stage_with_variables_cfn_behaves.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

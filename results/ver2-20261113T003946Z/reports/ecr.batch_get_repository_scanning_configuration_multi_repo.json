@@ -1,0 +1,23 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "ecr.batch-get-repository-scanning-configuration-multi-repo",
+    "detail": null,
+    "duration_ms": 106.7,
+    "kind": "passed",
+    "service": "ecr",
+    "verdict": "passed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_batch_get_repository_scanning_configuration_multi_repo.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

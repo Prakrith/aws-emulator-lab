@@ -1,0 +1,23 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "dynamodb.put-item-number-precision-exceeds-limit-rejected",
+    "detail": null,
+    "duration_ms": 3115.9,
+    "kind": "passed",
+    "service": "dynamodb",
+    "verdict": "passed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_put_item_number_precision_exceeds_limit_rejected.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

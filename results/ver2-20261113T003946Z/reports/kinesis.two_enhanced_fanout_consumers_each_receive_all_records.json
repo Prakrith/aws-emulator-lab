@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "kinesis.two-enhanced-fanout-consumers-each-receive-all-records",
+    "detail": "File \"context.py\", line 123, in wrapper\n    return func(*args, **kwargs)\n  File \"client.py\", line 1094, in _make_api_call\n    raise error_class(parsed_response, operation_name)\nbotocore.exceptions.ClientError: An error occurred (NotImplemented) when calling the SubscribeToShard operation: operation SubscribeToShard is not implemented in this emulator",
+    "duration_ms": 4158.5,
+    "kind": "not_implemented",
+    "service": "kinesis",
+    "site": {
+      "error_code": "NotImplemented",
+      "error_operation": "SubscribeToShard",
+      "error_status": 501,
+      "exception": "ClientError",
+      "function": "run",
+      "source": "sub = c.subscribe_to_shard(",
+      "statement": 14
+    },
+    "verdict": "error"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_two_enhanced_fanout_consumers_each_receive_all_records.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

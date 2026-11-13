@@ -1,0 +1,23 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "sns.publish-batch-one-call-two-message-groups-each-keeps-its-own-order",
+    "detail": null,
+    "duration_ms": 95.6,
+    "kind": "passed",
+    "service": "sns",
+    "verdict": "passed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_publish_batch_one_call_two_message_groups_each_keeps_its_own_order.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

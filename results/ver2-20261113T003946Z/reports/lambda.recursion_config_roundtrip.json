@@ -1,0 +1,23 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "lambda.recursion-config-roundtrip",
+    "detail": null,
+    "duration_ms": 2150.3,
+    "kind": "passed",
+    "service": "lambda",
+    "verdict": "passed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_recursion_config_roundtrip.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

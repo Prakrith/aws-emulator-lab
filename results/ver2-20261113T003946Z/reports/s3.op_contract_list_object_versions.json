@@ -1,0 +1,23 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "s3.op-contract-listObjectVersions",
+    "detail": null,
+    "duration_ms": 121.2,
+    "kind": "passed",
+    "service": "s3",
+    "verdict": "passed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_op_contract_list_object_versions.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

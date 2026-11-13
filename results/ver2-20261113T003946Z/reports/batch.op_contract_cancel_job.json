@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "batch.op-contract-cancelJob",
+    "detail": "File \"check_op_contract_cancel_job.py\", line 41, in run\n    code, message = _error(lambda: batch.cancel_job(jobId=\"not a valid job id!!\", reason=\"probe\"))\n                    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"check_op_contract_cancel_job.py\", line 56, in _error\n    raise AssertionError(f\"expected a rejection, but the call succeeded and returned {result!r}\")\nAssertionError: expected a rejection, but the call succeeded and returned {'ResponseMetadata': {'RequestId': '5037bfb2-4995-4e3b-b08a-04ba498036ec', 'HTTPStatusCode': 200, 'HTTPHeaders': {'content-type': 'application/json', 'x-amzn-requestid': '5037bfb2-4995-4e3b-b08a-04ba498036ec', 'content-length': '2', 'date': 'Fri, 13 Nov 2026 01:08:29 GMT'}, 'RetryAttempts': 0}}",
+    "duration_ms": 4150.0,
+    "kind": "failed",
+    "service": "batch",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "_error",
+      "source": "raise AssertionError(f\"expected a rejection, but the call succeeded and returned {result!r}\")",
+      "statement": 11
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_op_contract_cancel_job.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

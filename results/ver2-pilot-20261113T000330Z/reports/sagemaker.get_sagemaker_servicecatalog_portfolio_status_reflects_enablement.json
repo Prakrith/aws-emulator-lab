@@ -1,0 +1,23 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "sagemaker.get-sagemaker-servicecatalog-portfolio-status-reflects-enablement",
+    "detail": null,
+    "duration_ms": 102.6,
+    "kind": "passed",
+    "service": "sagemaker",
+    "verdict": "passed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_get_sagemaker_servicecatalog_portfolio_status_reflects_enablement.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

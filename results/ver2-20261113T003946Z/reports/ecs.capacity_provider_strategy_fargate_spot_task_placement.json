@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "ecs.capacity-provider-strategy-fargate-spot-task-placement",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_capacity_provider_strategy_fargate_spot_task_placement.py\", line 57, in run\n    assert task.get(\"launchType\") == \"FARGATE\", (\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: expected launchType=FARGATE (the underlying platform for the FARGATE_SPOT capacity provider), got None",
+    "duration_ms": 12240.2,
+    "kind": "failed",
+    "service": "ecs",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert task.get(\"launchType\") == \"FARGATE\", (",
+      "statement": 12
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_capacity_provider_strategy_fargate_spot_task_placement.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

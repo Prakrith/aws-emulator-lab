@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "cloudwatch.op-contract-putAnomalyDetector-delete-lifecycle",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_op_contract_put_anomaly_detector_delete_lifecycle.py\", line 68, in run\n    assert message == expected_message, f\"expected message {expected_message!r}, got {message!r}\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: expected message 'Either single metric attributes, SingleMetricAnomalyDetector or MetricMathAnomalyDetector can be set, found MetricMathAnomalyDetector, SingleMetricAnomalyDetector.', got 'Either single metric attributes, SingleMetricAnomalyDetector or MetricMathAnomalyDetector can be set, found SingleMetricAnomalyDetector, MetricMathAnomalyDetector.'",
+    "duration_ms": 72.2,
+    "kind": "failed",
+    "service": "cloudwatch",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert message == expected_message, f\"expected message {expected_message!r}, got {message!r}\"",
+      "statement": 18
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_op_contract_put_anomaly_detector_delete_lifecycle.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

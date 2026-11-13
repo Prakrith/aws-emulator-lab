@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "ecs.container-depends-on-success-gates-dependent-start",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_container_depends_on_success_gates_dependent_start.py\", line 175, in run\n    assert app_gated.get(\"exitCode\") is None, (\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: app must NEVER have run once its SUCCESS dependency failed \u2014 an exitCode here means the runtime ignored dependsOn, got {'containerArn': 'arn:aws:ecs:us-west-2:000000000000:container/sim2real-behav-ecs-cluster-eedf04867281/00000000000000000000000000000002/00000000000000000000000000000004', 'taskArn': 'arn:aws:ecs:us-west-2:000000000000:task/sim2real-behav-ecs-cluster-eedf04867281/00000000000000000000000000000002', 'name': 'app', 'image': 'public.ecr.aws/docker/library/busybox:1.36', 'lastStatus': 'STOPPED', 'exitCode': 5, 'networkBindings': [], 'networkInterfaces': [{'attachmentId': '00000002-0000-0000-0000-000000000002', 'privateIpv4Address': '172.31.0.6'}], 'healthStatus': 'UNKNOWN', 'managedAgents': [], 'cpu': '0'}",
+    "duration_ms": 40323.7,
+    "kind": "failed",
+    "service": "ecs",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert app_gated.get(\"exitCode\") is None, (",
+      "statement": 22
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_container_depends_on_success_gates_dependent_start.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

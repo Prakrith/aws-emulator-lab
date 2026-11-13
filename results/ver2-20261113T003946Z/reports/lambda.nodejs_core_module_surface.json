@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "lambda.nodejs-core-module-surface",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_nodejs_core_module_surface.py\", line 54, in run\n    assert out[\"failed\"] == [], f\"core modules failed to load: {out['failed']!r}\"\n           ^^^^^^^^^^^^^^^^^^^\nAssertionError: core modules failed to load: [{'name': 'http', 'error': \"Error: Cannot find module 'http'\\nRequire stack:\\n- /var/task/index.js\\n- /var/runtime/index.mjs\"}, {'name': 'https', 'error': \"Error: Cannot find module 'https'\\nRequire stack:\\n- /var/task/index.js\\n- /var/runtime/index.mjs\"}, {'name': 'net', 'error': \"Error: Cannot find module 'net'\\nRequire stack:\\n- /var/task/index.js\\n- /var/runtime/index.mjs\"}, {'name': 'dns', 'error': \"Error: Cannot find module 'dns'\\nRequire stack:\\n- /var/task/index.js\\n- /var/runtime/index.mjs\"}, {'name': 'tls', 'error': \"Error: Cannot find module 'tls'\\nRequire stack:\\n- /var/task/index.js\\n- /var/runtime/index.mjs\"}, {'name': 'zlib', 'error': \"Error: Cannot find module 'zlib'\\nRequire stack:\\n- /var/task/index.js\\n- /var/runtime/index.mjs\"}, {'name': 'child_process', 'error': \"Error: Cannot find module 'child_process'\\nRequire stack:\\n- /var/task/index.js\\n- /var/runtime/index.mjs\"}, {'name': 'worker_threads', 'error': \"Error: Cannot find module 'worker_threads'\\nRequire stack:\\n- /var/task/index.js\\n- /var/runtime/index.mjs\"}, {'name': 'perf_hooks', 'error': \"Error: Cannot find module 'perf_hooks'\\nRequire stack:\\n- /var/task/index.js\\n- /var/runtime/index.mjs\"}, {'name': 'async_hooks', 'error': \"Error: Cannot find module 'async_hooks'\\nRequire stack:\\n- /var/task/index.js\\n- /var/runtime/index.mjs\"}, {'name': 'readline', 'error': \"Error: Cannot find module 'readline'\\nRequire stack:\\n- /var/task/index.js\\n- /var/runtime/index.mjs\"}, {'name': 'v8', 'error': \"Error: Cannot find module 'v8'\\nRequire stack:\\n- /var/task/index.js\\n- /var/runtime/index.mjs\"}, {'name': 'vm', 'error': \"Error: Cannot find module 'vm'\\nRequire stack:\\n- /var/task/index.js\\n- /var/runtime/index.mjs\"}]",
+    "duration_ms": 1131.4,
+    "kind": "failed",
+    "service": "lambda",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert out[\"failed\"] == [], f\"core modules failed to load: {out['failed']!r}\"",
+      "statement": 4
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_nodejs_core_module_surface.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

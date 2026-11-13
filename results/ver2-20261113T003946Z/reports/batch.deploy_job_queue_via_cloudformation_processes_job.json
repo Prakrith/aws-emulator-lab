@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "batch.deploy-job-queue-via-cloudformation-processes-job",
+    "detail": "File \"context.py\", line 123, in wrapper\n    return func(*args, **kwargs)\n  File \"client.py\", line 1094, in _make_api_call\n    raise error_class(parsed_response, operation_name)\nbotocore.errorfactory.ClientException: An error occurred (ClientException) when calling the SubmitJob operation: JobDefinition name sim2real-batch-cfn-jd-0ea9b317d481 does not exist or is not in ACTIVE status.",
+    "duration_ms": 1366.2,
+    "kind": "target_error",
+    "service": "batch",
+    "site": {
+      "error_code": "ClientException",
+      "error_operation": "SubmitJob",
+      "error_status": 400,
+      "exception": "ClientException",
+      "function": "run",
+      "source": "job = batch.submit_job(",
+      "statement": 12
+    },
+    "verdict": "error"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_deploy_job_queue_via_cloudformation_processes_job.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

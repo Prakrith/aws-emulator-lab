@@ -1,0 +1,35 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "ec2.route-server-endpoint-lifecycle-transitions",
+    "cleanup_detail": "cleanup failed: RuntimeError('1 teardown(s) failed: ClientError(\"An error occurred (IncorrectState) when calling the DeleteRouteServerEndpoint operation: route-server-endpoint \\'rse-0000000000000008c\\' is in the \\'deleted\\' state.\")')",
+    "cleanup_failed": true,
+    "cleanup_ms": 22.1,
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_route_server_endpoint_lifecycle_transitions.py\", line 106, in run\n    assert err.get(\"Message\") == f\"Route Server Endpoint {ep_id} is in an invalid state.\", (\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: unexpected message: \"route-server-endpoint 'rse-0000000000000008c' is in the 'deleted' state.\"",
+    "duration_ms": 12240.1,
+    "kind": "failed",
+    "service": "ec2",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert err.get(\"Message\") == f\"Route Server Endpoint {ep_id} is in an invalid state.\", (",
+      "statement": 28
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_route_server_endpoint_lifecycle_transitions.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

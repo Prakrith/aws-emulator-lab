@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "rds.deploy-db-cluster-cfn-behaves",
+    "detail": "File \"check_deploy_db_cluster_cfn_behaves.py\", line 85, in _deploy_cfn_stack\n    _wait_stack_status(ctx, stack_name, {\"CREATE_COMPLETE\"}, timeout_s)\n    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"check_deploy_db_cluster_cfn_behaves.py\", line 118, in _wait_stack_status\n    raise AssertionError(f\"stack {stack_name} reached unexpected status {status}\")\nAssertionError: stack sim2real-rds-stack-c2692770cfb8 reached unexpected status ROLLBACK_IN_PROGRESS",
+    "duration_ms": 231.3,
+    "kind": "failed",
+    "service": "rds",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "_wait_stack_status",
+      "source": "raise AssertionError(f\"stack {stack_name} reached unexpected status {status}\")",
+      "statement": 6
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_deploy_db_cluster_cfn_behaves.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "sts.e2e-session-tag-propagation-through-role-chain",
+    "detail": "File \"check_e2e_session_tag_propagation_through_role_chain.py\", line 174, in run\n    denied_code, denied_message = _poll_until(\n                                  ~~~~~~~~~~~^\n        probe=lambda: _list_outcome(s3_2b, bucket_name),\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ...<2 lines>...\n        interval_s=3,\n        ^^^^^^^^^^^^^\n    )\n    ^\n  File \"check_e2e_session_tag_propagation_through_role_chain.py\", line 212, in _poll_until\n    raise AssertionError(f\"condition not met within {timeout_s}s; last={last!r}\")\nAssertionError: condition not met within 30s; last=('ok', 'ListObjectsV2 succeeded')",
+    "duration_ms": 30342.2,
+    "kind": "failed",
+    "service": "sts",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "_poll_until",
+      "source": "raise AssertionError(f\"condition not met within {timeout_s}s; last={last!r}\")",
+      "statement": 37
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_e2e_session_tag_propagation_through_role_chain.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

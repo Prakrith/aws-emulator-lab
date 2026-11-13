@@ -1,0 +1,23 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "dynamodb.e2e-paginated-export",
+    "detail": null,
+    "duration_ms": 3103.8,
+    "kind": "passed",
+    "service": "dynamodb",
+    "verdict": "passed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_e2e_paginated_export.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

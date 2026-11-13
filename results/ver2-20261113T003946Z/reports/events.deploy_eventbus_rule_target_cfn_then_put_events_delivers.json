@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "events.deploy-eventbus-rule-target-cfn-then-put-events-delivers",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_deploy_eventbus_rule_target_cfn_then_put_events_delivers.py\", line 43, in run\n    assert status == \"CREATE_COMPLETE\", f\"stack {stack_name} ended in unexpected status {status}\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: stack sim2real-evb-stack-8a6b8d33424c ended in unexpected status ROLLBACK_COMPLETE",
+    "duration_ms": 5108.2,
+    "kind": "failed",
+    "service": "events",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert status == \"CREATE_COMPLETE\", f\"stack {stack_name} ended in unexpected status {status}\"",
+      "statement": 13
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_deploy_eventbus_rule_target_cfn_then_put_events_delivers.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

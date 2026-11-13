@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "lambda.log-lambda-report-stdout-stderr-and-logging-lines-framed-in-stream",
+    "detail": "File \"check_log_lambda_report_stdout_stderr_and_logging_lines_framed_in_stream.py\", line 64, in run\n    rid, _, body, _ = _invoke(lam, fn, {\"marker\": m})\n                      ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"check_log_lambda_report_stdout_stderr_and_logging_lines_framed_in_stream.py\", line 258, in _invoke\n    assert \"FunctionError\" not in resp, (\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: sim2real-behav-logrep-4b3f35dab3ed raised unexpectedly: 'Unhandled' '{\"errorMessage\":\"a Lambda function in this emulator has no host filesystem or process to reach\",\"errorType\":\"OSError\",\"requestId\":\"0088629e-5e2c-4f3c-af2a-846c69edd695\",\"stackTrace\":[\"  File \\\\\"/var/task/index.py\\\\\", line 13, in handler\\\\n    os.write(1, (\\\\\"FD1-\\\\\" + m + \\\\\"\\\\\\\\n\\\\\").encode())\\\\n\"]}'",
+    "duration_ms": 2268.9,
+    "kind": "failed",
+    "service": "lambda",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "_invoke",
+      "source": "assert \"FunctionError\" not in resp, (",
+      "statement": 7
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_log_lambda_report_stdout_stderr_and_logging_lines_framed_in_stream.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

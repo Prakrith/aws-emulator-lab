@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "lambda.java-task-timed-out-kills-the-invoke-and-resets-the-jvm",
+    "detail": "File \"context.py\", line 123, in wrapper\n    return func(*args, **kwargs)\n  File \"client.py\", line 1094, in _make_api_call\n    raise error_class(parsed_response, operation_name)\nbotocore.errorfactory.InvalidRuntimeException: An error occurred (InvalidRuntimeException) when calling the Invoke operation (reached max retries: 2): The runtime java21 is not supported by this emulator, which runs the Python and node runtimes.",
+    "duration_ms": 3723.6,
+    "kind": "target_error",
+    "service": "lambda",
+    "site": {
+      "error_code": "InvalidRuntimeException",
+      "error_operation": "Invoke",
+      "error_status": 502,
+      "exception": "InvalidRuntimeException",
+      "function": "_invoke",
+      "source": "resp = lam.invoke(FunctionName=name, InvocationType=\"RequestResponse\", LogType=\"Tail\",",
+      "statement": 6
+    },
+    "verdict": "error"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_java_task_timed_out_kills_the_invoke_and_resets_the_jvm.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

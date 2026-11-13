@@ -1,0 +1,23 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "s3.s3unicode-list-objects-url-encoding-is-form-encoded-not-rfc3986",
+    "detail": null,
+    "duration_ms": 134.7,
+    "kind": "passed",
+    "service": "s3",
+    "verdict": "passed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_s3unicode_list_objects_url_encoding_is_form_encoded_not_rfc3986.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

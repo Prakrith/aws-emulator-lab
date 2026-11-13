@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "athena.query-results-metadata-and-rows",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_query_results_metadata_and_rows.py\", line 33, in run\n    assert by_name[\"flag\"] == \"boolean\", by_name\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: {'num': 'integer', 'txt': 'varchar', 'flag': 'integer'}",
+    "duration_ms": 4177.6,
+    "kind": "failed",
+    "service": "athena",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert by_name[\"flag\"] == \"boolean\", by_name",
+      "statement": 12
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_query_results_metadata_and_rows.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

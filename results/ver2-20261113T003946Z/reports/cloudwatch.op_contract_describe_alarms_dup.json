@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "cloudwatch.op-contract-describeAlarms-dup",
+    "detail": "File \"context.py\", line 123, in wrapper\n    return func(*args, **kwargs)\n  File \"client.py\", line 1094, in _make_api_call\n    raise error_class(parsed_response, operation_name)\nbotocore.errorfactory.InvalidNextToken: An error occurred (InvalidNextToken) when calling the DescribeAlarms operation: NextToken is not a token this service issued",
+    "duration_ms": 72.8,
+    "kind": "target_error",
+    "service": "cloudwatch",
+    "site": {
+      "error_code": "InvalidNextToken",
+      "error_operation": "DescribeAlarms",
+      "error_status": 400,
+      "exception": "InvalidNextToken",
+      "function": "run",
+      "source": "resp_token = cw.describe_alarms(",
+      "statement": 16
+    },
+    "verdict": "error"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_op_contract_describe_alarms_dup.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

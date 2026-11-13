@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "lambda.out-of-memory-kill-discards-the-execution-environment",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_out_of_memory_kill_discards_the_execution_environment.py\", line 225, in run\n    raise AssertionError(f\"five invokes never reached environment {doomed!r}: {body!r}\")\nAssertionError: five invokes never reached environment 'f57f863fac63470ba25bfe06577d21e4': {'env_id': 'f9af37bdc2ba4bbaab52e43843daf3f5', 'invokes': 1, 'skipped': True}",
+    "duration_ms": 1600.7,
+    "kind": "failed",
+    "service": "lambda",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "raise AssertionError(f\"five invokes never reached environment {doomed!r}: {body!r}\")",
+      "statement": 8
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_out_of_memory_kill_discards_the_execution_environment.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

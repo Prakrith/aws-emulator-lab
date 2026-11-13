@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "sts.get-caller-identity-cannot-be-denied-by-policy",
+    "detail": "File \"check_get_caller_identity_cannot_be_denied_by_policy.py\", line 42, in _stable_client_error\n    last = _client_error(fn)\n  File \"check_get_caller_identity_cannot_be_denied_by_policy.py\", line 37, in _client_error\n    raise AssertionError(f\"expected the call to fail, but it succeeded: {result!r}\")\nAssertionError: expected the call to fail, but it succeeded: {'ResponseMetadata': {'RequestId': '91546BE65F462CB0', 'HostId': '91546be65f462cb04ebcc6292a0306509b73976ea2e4f2e3285baf077b9bc105', 'HTTPStatusCode': 200, 'HTTPHeaders': {'content-type': 'application/xml', 'x-amz-request-id': '91546BE65F462CB0', 'x-amz-id-2': '91546be65f462cb04ebcc6292a0306509b73976ea2e4f2e3285baf077b9bc105', 'content-length': '204', 'date': 'Fri, 13 Nov 2026 01:25:52 GMT'}, 'RetryAttempts': 0}, 'Buckets': [], 'Owner': {'ID': 'f7b11509f4d675c3c44f0dd37ca830bb02e8cfa58f04c46283c4bfcbdce1ff45'}}",
+    "duration_ms": 229.3,
+    "kind": "failed",
+    "service": "sts",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "_client_error",
+      "source": "raise AssertionError(f\"expected the call to fail, but it succeeded: {result!r}\")",
+      "statement": 21
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_get_caller_identity_cannot_be_denied_by_policy.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

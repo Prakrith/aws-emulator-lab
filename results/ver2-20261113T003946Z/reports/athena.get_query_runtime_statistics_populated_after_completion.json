@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "athena.get-query-runtime-statistics-populated-after-completion",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_get_query_runtime_statistics_populated_after_completion.py\", line 56, in run\n    assert e.response[\"Error\"][\"Code\"] == \"InvalidRequestException\", (\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: expected InvalidRequestException, got NotImplemented",
+    "duration_ms": 1755.4,
+    "kind": "failed",
+    "service": "athena",
+    "site": {
+      "error_code": "NotImplemented",
+      "error_operation": "GetQueryRuntimeStatistics",
+      "error_status": 501,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert e.response[\"Error\"][\"Code\"] == \"InvalidRequestException\", (",
+      "statement": 7
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_get_query_runtime_statistics_populated_after_completion.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

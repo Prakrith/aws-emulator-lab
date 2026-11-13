@@ -1,0 +1,35 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "sts.a-chained-session-outlasts-the-parent-role-and-expires-later-than-the-parent-session",
+    "cleanup_detail": "teardown ran while the timed-out test was still running",
+    "cleanup_failed": false,
+    "cleanup_ms": 30.3,
+    "detail": "Check timed out after 60.0s",
+    "duration_ms": 60009.0,
+    "kind": "timeout",
+    "service": "sts",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "Timeout",
+      "function": "_poll",
+      "source": "time.sleep(interval_s)",
+      "statement": 57
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_a_chained_session_outlasts_the_parent_role_and_expires_later_than_the_parent_session.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

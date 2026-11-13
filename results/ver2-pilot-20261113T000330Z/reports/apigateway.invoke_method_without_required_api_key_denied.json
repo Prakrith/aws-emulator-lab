@@ -1,0 +1,35 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "apigateway.invoke-method-without-required-api-key-denied",
+    "cleanup_detail": "cleanup failed: RuntimeError(\"1 teardown(s) failed: BadRequestException('An error occurred (BadRequestException) when calling the DeleteUsagePlan operation: Cannot delete Usage Plan 3pzlwequrz because there are API Stages associated with it, including eocd2yo7iw:test')\")",
+    "cleanup_failed": true,
+    "cleanup_ms": 5.6,
+    "detail": "File \"context.py\", line 678, in rest_api_url\n    return self.api_url(api_id, stage)\n           ~~~~~~~~~~~~^^^^^^^^^^^^^^^\n  File \"context.py\", line 468, in api_url\n    raise CapabilityNotOffered(\n    ...<2 lines>...\n    )\nfidelity_tests_runner.context.CapabilityNotOffered: the emulator offers no API Gateway invoke URL (the run names no invoke-URL template: --execute-api-url, FIDELITY_TESTS_EXECUTE_API_URL_TEMPLATE)",
+    "duration_ms": 81.0,
+    "kind": "failed",
+    "service": "apigateway",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "CapabilityNotOffered",
+      "function": "run",
+      "source": "invoke_url = f\"{ctx.rest_api_url(api_id, stage_name)}/\"",
+      "statement": 21
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_invoke_method_without_required_api_key_denied.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

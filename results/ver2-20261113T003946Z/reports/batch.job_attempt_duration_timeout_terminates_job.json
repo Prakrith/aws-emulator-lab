@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 600.0,
+    "check_id": "batch.job-attempt-duration-timeout-terminates-job",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_job_attempt_duration_timeout_terminates_job.py\", line 50, in run\n    assert \"timeout\" in reason or \"timed out\" in reason, f\"unexpected statusReason: {final.get('statusReason')!r}\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: unexpected statusReason: \"This emulator does not run containers, so the job's container was never started\"",
+    "duration_ms": 20315.4,
+    "kind": "failed",
+    "service": "batch",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert \"timeout\" in reason or \"timed out\" in reason, f\"unexpected statusReason: {final.get('statusReason')!r}\"",
+      "statement": 14
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_job_attempt_duration_timeout_terminates_job.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

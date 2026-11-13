@@ -1,0 +1,23 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "glue.identity-center-configuration-enforces-managed-access-control",
+    "detail": null,
+    "duration_ms": 109.8,
+    "kind": "passed",
+    "service": "glue",
+    "verdict": "passed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_identity_center_configuration_enforces_managed_access_control.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

@@ -1,0 +1,23 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "kinesis.e2e-stream-produce-scale-consume-teardown",
+    "detail": null,
+    "duration_ms": 27429.0,
+    "kind": "passed",
+    "service": "kinesis",
+    "verdict": "passed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_e2e_stream_produce_scale_consume_teardown.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

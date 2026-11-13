@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "athena.partition-pruning-scans-only-the-selected-partition",
+    "detail": "File \"check_partition_pruning_scans_only_the_selected_partition.py\", line 162, in run\n    _run_sql(athena, out, f\"MSCK REPAIR TABLE `{database}`.`{table}`\")\n    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"check_partition_pruning_scans_only_the_selected_partition.py\", line 92, in _run_sql\n    raise AssertionError(\n    ...<2 lines>...\n    )\nAssertionError: statement reached FAILED, expected SUCCEEDED: 'MSCK REPAIR TABLE `sim2real_behav_db_d1d1239ad03c`.`sim2real_behav_tbl_05b63970d10f`' -- near \"MSCK\": syntax error in MSCK REPAIR TABLE `sim2real_behav_db_d1d1239ad03c`.`sim2real_behav_tbl_05b63970d10f` at offset 0",
+    "duration_ms": 12270.5,
+    "kind": "failed",
+    "service": "athena",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "_run_sql",
+      "source": "raise AssertionError(",
+      "statement": 15
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_partition_pruning_scans_only_the_selected_partition.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

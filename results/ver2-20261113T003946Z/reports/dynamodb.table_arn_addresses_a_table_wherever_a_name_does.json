@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "dynamodb.table-arn-addresses-a-table-wherever-a-name-does",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_table_arn_addresses_a_table_wherever_a_name_does.py\", line 109, in run\n    assert message == expected_message, (\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: GetItem addressed by an ARN with an empty vendor segment: expected the message \"1 validation error detected: Value 'arn:aws::us-west-2:000000000000:table/sim2real-behav-arn-3ce5cf96f441' at 'tableName' failed to satisfy constraint: Valid ARN format is 'arn:<awsPartition>:<vendor>:<region>:<subscriber>:resourceType/resourceName', where Resource name must have length less than or equal to 255, Resource name must have length greater than or equal to 3, Resource name must satisfy regular expression pattern: [a-zA-Z0-9_.-]+\", got \"1 validation error detected: Value 'arn:aws::us-west-2:000000000000:table/sim2real-behav-arn-3ce5cf96f441' at 'tableName' failed to satisfy constraint: Valid ARN format is 'arn:<awsPartition>:<vendor>:<region>:<awsAccountId>:<resourceType>/<resourceId>'\"",
+    "duration_ms": 3120.4,
+    "kind": "failed",
+    "service": "dynamodb",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert message == expected_message, (",
+      "statement": 24
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_table_arn_addresses_a_table_wherever_a_name_does.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

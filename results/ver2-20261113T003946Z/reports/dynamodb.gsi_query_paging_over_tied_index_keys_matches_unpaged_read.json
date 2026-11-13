@@ -1,0 +1,23 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "dynamodb.gsi-query-paging-over-tied-index-keys-matches-unpaged-read",
+    "detail": null,
+    "duration_ms": 3228.0,
+    "kind": "passed",
+    "service": "dynamodb",
+    "verdict": "passed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_gsi_query_paging_over_tied_index_keys_matches_unpaged_read.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

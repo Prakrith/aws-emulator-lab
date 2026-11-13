@@ -1,0 +1,23 @@
+{
+  "check": {
+    "budget_s": 600.0,
+    "check_id": "sts.tightening-the-trust-policy-does-not-invalidate-an-already-vended-session",
+    "detail": null,
+    "duration_ms": 308.0,
+    "kind": "passed",
+    "service": "sts",
+    "verdict": "passed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_tightening_the_trust_policy_does_not_invalidate_an_already_vended_session.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

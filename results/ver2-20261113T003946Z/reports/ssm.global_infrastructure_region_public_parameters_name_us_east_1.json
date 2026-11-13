@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "ssm.global-infrastructure-region-public-parameters-name-us-east-1",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_global_infrastructure_region_public_parameters_name_us_east_1.py\", line 38, in run\n    assert regions.get(name) == (\"String\", code), (\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: GetParametersByPath /aws/service/global-infrastructure/regions must list /aws/service/global-infrastructure/regions/us-east-1 as a String whose value is 'us-east-1'; got None among 0 parameters",
+    "duration_ms": 83.9,
+    "kind": "failed",
+    "service": "ssm",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert regions.get(name) == (\"String\", code), (",
+      "statement": 3
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_global_infrastructure_region_public_parameters_name_us_east_1.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

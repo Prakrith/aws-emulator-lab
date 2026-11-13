@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "apigateway.apigw-cache-key-parameters-index-the-stage-cache-per-declared-key-only",
+    "detail": "File \"context.py\", line 678, in rest_api_url\n    return self.api_url(api_id, stage)\n           ~~~~~~~~~~~~^^^^^^^^^^^^^^^\n  File \"context.py\", line 468, in api_url\n    raise CapabilityNotOffered(\n    ...<2 lines>...\n    )\nfidelity_tests_runner.context.CapabilityNotOffered: the emulator offers no API Gateway invoke URL (the run names no invoke-URL template: --execute-api-url, FIDELITY_TESTS_EXECUTE_API_URL_TEMPLATE)",
+    "duration_ms": 85.6,
+    "kind": "failed",
+    "service": "apigateway",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "CapabilityNotOffered",
+      "function": "_apigw_url",
+      "source": "return f\"{ctx.rest_api_url(api_id, stage)}/{path.lstrip('/')}\"",
+      "statement": 12
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_apigw_cache_key_parameters_index_the_stage_cache_per_declared_key_only.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

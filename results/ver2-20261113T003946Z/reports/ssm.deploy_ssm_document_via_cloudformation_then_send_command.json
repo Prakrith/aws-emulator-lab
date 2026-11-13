@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "ssm.deploy-ssm-document-via-cloudformation-then-send-command",
+    "detail": "File \"context.py\", line 123, in wrapper\n    return func(*args, **kwargs)\n  File \"client.py\", line 1094, in _make_api_call\n    raise error_class(parsed_response, operation_name)\nbotocore.errorfactory.InvalidDocument: An error occurred (InvalidDocument) when calling the GetDocument operation: Document with name sim2real-ssmdoc-0fcb592a45da does not exist.",
+    "duration_ms": 2148.7,
+    "kind": "target_error",
+    "service": "ssm",
+    "site": {
+      "error_code": "InvalidDocument",
+      "error_operation": "GetDocument",
+      "error_status": 400,
+      "exception": "InvalidDocument",
+      "function": "run",
+      "source": "got = ssm.get_document(Name=doc_name, DocumentFormat=\"JSON\")",
+      "statement": 10
+    },
+    "verdict": "error"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_deploy_ssm_document_via_cloudformation_then_send_command.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

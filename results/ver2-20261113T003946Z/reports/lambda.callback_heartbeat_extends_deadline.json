@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 600.0,
+    "check_id": "lambda.callback-heartbeat-extends-deadline",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_callback_heartbeat_extends_deadline.py\", line 85, in run\n    raise _never_ready(\n    ...<2 lines>...\n    )\nAssertionError: durable execution arn:aws:lambda:us-west-2:000000000000:function:sim2real-dfn-4f0648ae501d:$LATEST/durable-execution/sim2real-hbext-6f033b8e6bb7/2ff38c3ff7764854ba35f65413688352 never delivered a CallbackId over https://sqs.us-west-2.amazonaws.com/000000000000/sim2real-hbext-q-c97aa71be2d2 (the notify callback passed to wait_for_callback never fired within the poll window)",
+    "duration_ms": 182344.8,
+    "kind": "failed",
+    "service": "lambda",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "raise _never_ready(",
+      "statement": 9
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_callback_heartbeat_extends_deadline.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

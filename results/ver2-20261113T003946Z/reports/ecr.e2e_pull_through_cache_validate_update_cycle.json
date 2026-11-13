@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "ecr.e2e-pull-through-cache-validate-update-cycle",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_e2e_pull_through_cache_validate_update_cycle.py\", line 61, in run\n    assert before[\"isValid\"] is False, f\"expected bogus-credential rule to fail validation: {before!r}\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: expected bogus-credential rule to fail validation: {'ecrRepositoryPrefix': 'sim2real-ptc-8c34c3cb511b', 'registryId': '000000000000', 'upstreamRegistryUrl': 'registry-1.docker.io', 'credentialArn': 'arn:aws:secretsmanager:us-west-2:000000000000:secret:ecr-pullthroughcache/sim2real-ptc-a-71a418824479-YzWAiz', 'upstreamRepositoryPrefix': 'ROOT', 'isValid': True, 'failure': '', 'ResponseMetadata': {'HTTPStatusCode': 200, 'HTTPHeaders': {'content-type': 'application/x-amz-json-1.1', 'content-length': '313', 'date': 'Fri, 13 Nov 2026 01:18:37 GMT'}, 'RetryAttempts': 0}}",
+    "duration_ms": 144.3,
+    "kind": "failed",
+    "service": "ecr",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert before[\"isValid\"] is False, f\"expected bogus-credential rule to fail validation: {before!r}\"",
+      "statement": 14
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_e2e_pull_through_cache_validate_update_cycle.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

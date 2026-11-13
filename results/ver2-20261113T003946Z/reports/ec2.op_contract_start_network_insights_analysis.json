@@ -1,0 +1,35 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "ec2.op-contract-start-network-insights-analysis",
+    "cleanup_detail": "cleanup failed: RuntimeError(\"1 teardown(s) failed: ClientError('An error occurred (NotImplemented) when calling the DeleteNetworkInsightsAnalysis operation: operation DeleteNetworkInsightsAnalysis is scaffolded but not implemented in this emulator')\")",
+    "cleanup_failed": true,
+    "cleanup_ms": 18.1,
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_op_contract_start_network_insights_analysis.py\", line 82, in run\n    assert code == \"InvalidParameterValue\", (\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: expected InvalidParameterValue for a bogus path id, got 'InvalidNetworkInsightsPathId.NotFound'",
+    "duration_ms": 5168.8,
+    "kind": "failed",
+    "service": "ec2",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert code == \"InvalidParameterValue\", (",
+      "statement": 21
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_op_contract_start_network_insights_analysis.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

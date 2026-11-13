@@ -1,0 +1,23 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "sqs.cloudwatch-alarm-state-transition-recorded",
+    "detail": null,
+    "duration_ms": 92.6,
+    "kind": "passed",
+    "service": "sqs",
+    "verdict": "passed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_cloudwatch_alarm_state_transition_recorded.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

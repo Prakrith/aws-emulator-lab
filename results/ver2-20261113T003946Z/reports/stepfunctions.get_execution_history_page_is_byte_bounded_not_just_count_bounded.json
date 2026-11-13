@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "stepfunctions.get-execution-history-page-is-byte-bounded-not-just-count-bounded",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_get_execution_history_page_is_byte_bounded_not_just_count_bounded.py\", line 145, in run\n    assert large_page.get(\"nextToken\") is not None, (\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: a page of 62 large-payload events returned no nextToken; expected one because the full history has 62 events of this shape",
+    "duration_ms": 4273.8,
+    "kind": "failed",
+    "service": "stepfunctions",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert large_page.get(\"nextToken\") is not None, (",
+      "statement": 16
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_get_execution_history_page_is_byte_bounded_not_just_count_bounded.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

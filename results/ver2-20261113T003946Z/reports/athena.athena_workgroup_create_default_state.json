@@ -1,0 +1,26 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "athena.athena-workgroup-create-default-state",
+    "cleanup_detail": "cleanup failed: RuntimeError(\"1 teardown(s) failed: ClientError('An error occurred (NotImplemented) when calling the DeleteWorkGroup operation: operation DeleteWorkGroup is scaffolded but not implemented in this emulator')\")",
+    "cleanup_failed": true,
+    "cleanup_ms": 1.8,
+    "detail": null,
+    "duration_ms": 66.8,
+    "kind": "passed",
+    "service": "athena",
+    "verdict": "passed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_athena_workgroup_create_default_state.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

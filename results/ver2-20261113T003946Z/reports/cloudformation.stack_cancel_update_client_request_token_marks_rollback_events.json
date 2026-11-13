@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "cloudformation.stack-cancel-update-client-request-token-marks-rollback-events",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_stack_cancel_update_client_request_token_marks_rollback_events.py\", line 41, in run\n    assert rows == [\n           ^^^^^^^^^\n    ...<9 lines>...\n    ], f\"events of the cancelled update: {rows!r}\"\n    ^\nAssertionError: events of the cancelled update: [('sim2real-cfn-cancel-001c9fda1a7c', 'UPDATE_IN_PROGRESS', 'User Initiated', 'update-69d6b1a29c54'), ('Wait', 'CREATE_IN_PROGRESS', None, 'update-69d6b1a29c54'), ('Wait', 'CREATE_IN_PROGRESS', 'Resource creation Initiated', 'update-69d6b1a29c54'), ('Wait', 'CREATE_COMPLETE', None, 'update-69d6b1a29c54'), ('sim2real-cfn-cancel-001c9fda1a7c', 'UPDATE_ROLLBACK_IN_PROGRESS', 'Stack update cancelled by user.', 'cancel-a8b6afa90122'), ('sim2real-cfn-cancel-001c9fda1a7c', 'UPDATE_ROLLBACK_COMPLETE_CLEANUP_IN_PROGRESS', None, 'cancel-a8b6afa90122'), ('sim2real-cfn-cancel-001c9fda1a7c', 'UPDATE_ROLLBACK_COMPLETE', 'Stack update cancelled by user.', 'cancel-a8b6afa90122')]",
+    "duration_ms": 6158.9,
+    "kind": "failed",
+    "service": "cloudformation",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert rows == [",
+      "statement": 12
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_stack_cancel_update_client_request_token_marks_rollback_events.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "sagemaker.scaling-configuration-recommendation-for-existing-endpoint",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_scaling_configuration_recommendation_for_existing_endpoint.py\", line 124, in run\n    assert description[\"Status\"] == \"COMPLETED\", (\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: inference recommendations job ended in 'FAILED': This emulator runs no model inference container and generates no benchmark traffic, so no load test was performed and no inference recommendation was measured.",
+    "duration_ms": 30281.4,
+    "kind": "failed",
+    "service": "sagemaker",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert description[\"Status\"] == \"COMPLETED\", (",
+      "statement": 17
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_scaling_configuration_recommendation_for_existing_endpoint.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

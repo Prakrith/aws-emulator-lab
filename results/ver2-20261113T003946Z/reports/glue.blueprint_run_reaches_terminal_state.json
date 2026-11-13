@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "glue.blueprint-run-reaches-terminal-state",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_blueprint_run_reaches_terminal_state.py\", line 82, in run\n    assert final_run[\"State\"] == \"FAILED\", (\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: expected FAILED for a zero-entity workflow (Glue rejects an empty graph as unrunnable), got 'SUCCEEDED': {'BlueprintName': 'sim2real-glue-bp-04112b079b71', 'RunId': '1b15525fbd8c0d51cd1a1b14ee754707', 'WorkflowName': 'sim2real-glue-bpwf-e5498d244cd2', 'State': 'SUCCEEDED', 'StartedOn': datetime.datetime(2026, 11, 12, 21, 0, 19, 137760, tzinfo=tzlocal()), 'CompletedOn': datetime.datetime(2026, 11, 12, 21, 0, 22, 137760, tzinfo=tzlocal()), 'Parameters': '{\"WorkflowName\": \"sim2real-glue-bpwf-e5498d244cd2\"}', 'RoleArn': 'arn:aws:iam::000000000000:role/sim2real-glue-bp-role-fa95a1d6962a'}",
+    "duration_ms": 10384.6,
+    "kind": "failed",
+    "service": "glue",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert final_run[\"State\"] == \"FAILED\", (",
+      "statement": 20
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_blueprint_run_reaches_terminal_state.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

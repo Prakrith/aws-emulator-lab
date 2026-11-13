@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "ecr.deploy-registry-scanning-configuration-enforced",
+    "detail": "File \"context.py\", line 123, in wrapper\n    return func(*args, **kwargs)\n  File \"client.py\", line 1094, in _make_api_call\n    raise error_class(parsed_response, operation_name)\nbotocore.exceptions.ClientError: An error occurred (ValidationError) when calling the CreateStack operation: Template format error: Unrecognized resource types: [AWS::ECR::RegistryScanningConfiguration]",
+    "duration_ms": 104.4,
+    "kind": "target_error",
+    "service": "ecr",
+    "site": {
+      "error_code": "ValidationError",
+      "error_operation": "CreateStack",
+      "error_status": 400,
+      "exception": "ClientError",
+      "function": "_deploy_cfn",
+      "source": "cfn.create_stack(",
+      "statement": 6
+    },
+    "verdict": "error"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_deploy_registry_scanning_configuration_enforced.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

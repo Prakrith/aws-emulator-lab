@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "ec2.snapshot-create-from-volume-and-describe",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_snapshot_create_from_volume_and_describe.py\", line 178, in run\n    assert reuse_message == \"Snapshot does not exist\", reuse_message\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: The snapshot 'snap-00000000000000081' does not exist.",
+    "duration_ms": 5193.0,
+    "kind": "failed",
+    "service": "ec2",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert reuse_message == \"Snapshot does not exist\", reuse_message",
+      "statement": 24
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_snapshot_create_from_volume_and_describe.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

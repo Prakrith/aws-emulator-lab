@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "ecs.deep-ecs-3-deploy-fail-maximum-percent-ceiling-never-exceeded-during-rollout",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_deep_ecs_3_deploy_fail_maximum_percent_ceiling_never_exceeded_during_rollout.py\", line 137, in run\n    assert _peak(control, \"capped\") > _DESIRED, (\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: the control (maximumPercent=200, minimumHealthyPercent=100) must start replacements before stopping old tasks, so more than 2 PENDING/RUNNING tasks must be sampled at some point; peak was 2 over 6 samples -- without this the subject's ceiling below is not evidence",
+    "duration_ms": 18456.5,
+    "kind": "failed",
+    "service": "ecs",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert _peak(control, \"capped\") > _DESIRED, (",
+      "statement": 26
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_deep_ecs_3_deploy_fail_maximum_percent_ceiling_never_exceeded_during_rollout.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

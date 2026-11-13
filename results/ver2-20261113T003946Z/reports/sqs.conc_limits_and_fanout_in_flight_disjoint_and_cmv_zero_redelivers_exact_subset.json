@@ -1,0 +1,23 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "sqs.conc-limits-and-fanout-in-flight-disjoint-and-cmv-zero-redelivers-exact-subset",
+    "detail": null,
+    "duration_ms": 6170.9,
+    "kind": "passed",
+    "service": "sqs",
+    "verdict": "passed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_conc_limits_and_fanout_in_flight_disjoint_and_cmv_zero_redelivers_exact_subset.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

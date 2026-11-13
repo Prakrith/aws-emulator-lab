@@ -1,0 +1,35 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "batch.job-queue-snapshot-capacity-usage-reflects-real-running-job",
+    "cleanup_detail": "teardown ran while the timed-out test was still running",
+    "cleanup_failed": false,
+    "cleanup_ms": 10222.2,
+    "detail": "Check timed out after 60.0s",
+    "duration_ms": 60008.3,
+    "kind": "timeout",
+    "service": "batch",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "Timeout",
+      "function": "_poll_until",
+      "source": "time.sleep(interval_s)",
+      "statement": 21
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_job_queue_snapshot_capacity_usage_reflects_real_running_job.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

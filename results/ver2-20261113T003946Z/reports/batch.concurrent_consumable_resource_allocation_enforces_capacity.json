@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "batch.concurrent-consumable-resource-allocation-enforces-capacity",
+    "detail": "File \"check_concurrent_consumable_resource_allocation_enforces_capacity.py\", line 67, in run\n    _warm_up_execution_role(ctx, jq_arn, exec_role_arn)\n    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"check_concurrent_consumable_resource_allocation_enforces_capacity.py\", line 226, in _warm_up_execution_role\n    raise AssertionError(f\"warm-up job {job_id} FAILED: {reason!r}\")\nAssertionError: warm-up job fcd1fc89-e657-4f50-af8d-1d024625acc0 FAILED: \"This emulator does not run containers, so the job's container was never started\"",
+    "duration_ms": 8444.5,
+    "kind": "failed",
+    "service": "batch",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "_warm_up_execution_role",
+      "source": "raise AssertionError(f\"warm-up job {job_id} FAILED: {reason!r}\")",
+      "statement": 12
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_concurrent_consumable_resource_allocation_enforces_capacity.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

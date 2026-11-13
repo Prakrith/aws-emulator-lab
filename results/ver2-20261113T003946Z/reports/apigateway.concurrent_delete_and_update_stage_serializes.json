@@ -1,0 +1,23 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "apigateway.concurrent-delete-and-update-stage-serializes",
+    "detail": null,
+    "duration_ms": 77.5,
+    "kind": "passed",
+    "service": "apigateway",
+    "verdict": "passed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_concurrent_delete_and_update_stage_serializes.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

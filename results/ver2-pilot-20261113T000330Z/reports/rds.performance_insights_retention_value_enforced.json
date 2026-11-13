@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "rds.performance-insights-retention-value-enforced",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_performance_insights_retention_value_enforced.py\", line 49, in run\n    assert good_instance[\"PerformanceInsightsRetentionPeriod\"] == 31, (\n           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nKeyError: 'PerformanceInsightsRetentionPeriod'",
+    "duration_ms": 15303.8,
+    "kind": "target_error",
+    "service": "rds",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "KeyError",
+      "function": "run",
+      "source": "assert good_instance[\"PerformanceInsightsRetentionPeriod\"] == 31, (",
+      "statement": 9
+    },
+    "verdict": "error"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_performance_insights_retention_value_enforced.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

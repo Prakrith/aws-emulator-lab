@@ -1,0 +1,23 @@
+{
+  "check": {
+    "budget_s": 600.0,
+    "check_id": "cloudwatch.alarm-math-and-anomaly-if-expression-alarm-grades-transformed-value",
+    "detail": null,
+    "duration_ms": 4155.2,
+    "kind": "passed",
+    "service": "cloudwatch",
+    "verdict": "passed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_alarm_math_and_anomaly_if_expression_alarm_grades_transformed_value.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

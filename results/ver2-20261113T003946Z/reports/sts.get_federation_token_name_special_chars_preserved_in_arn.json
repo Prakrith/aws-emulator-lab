@@ -1,0 +1,23 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "sts.get-federation-token-name-special-chars-preserved-in-arn",
+    "detail": null,
+    "duration_ms": 164.8,
+    "kind": "passed",
+    "service": "sts",
+    "verdict": "passed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_get_federation_token_name_special_chars_preserved_in_arn.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

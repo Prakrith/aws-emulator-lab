@@ -1,0 +1,26 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "batch.quota-share-lifecycle-create-active-delete",
+    "cleanup_detail": "cleanup failed: RuntimeError('2 teardown(s) failed: ClientException(\"An error occurred (ClientException) when calling the DeleteSchedulingPolicy operation: Cannot delete a scheduling policy that\\'s used in any job queues.\"); ClientException(\\'An error occurred (ClientException) when calling the DeleteServiceEnvironment operation: Cannot delete, found existing JobQueue relationship: sim2real-batch-jq-d79e4a7fb9d4\\')')",
+    "cleanup_failed": true,
+    "cleanup_ms": 2047.2,
+    "detail": null,
+    "duration_ms": 8161.7,
+    "kind": "passed",
+    "service": "batch",
+    "verdict": "passed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_quota_share_lifecycle_create_active_delete.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

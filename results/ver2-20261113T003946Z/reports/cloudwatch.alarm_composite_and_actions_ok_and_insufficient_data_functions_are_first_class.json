@@ -1,0 +1,23 @@
+{
+  "check": {
+    "budget_s": 600.0,
+    "check_id": "cloudwatch.alarm-composite-and-actions-ok-and-insufficient-data-functions-are-first-class",
+    "detail": null,
+    "duration_ms": 20193.2,
+    "kind": "passed",
+    "service": "cloudwatch",
+    "verdict": "passed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_alarm_composite_and_actions_ok_and_insufficient_data_functions_are_first_class.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

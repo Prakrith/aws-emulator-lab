@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "dynamodb.deploy-cfn-stream-arn-captures-writes",
+    "detail": "File \"context.py\", line 123, in wrapper\n    return func(*args, **kwargs)\n  File \"waiter.py\", line 378, in wait\n    raise WaiterError(\n    ...<3 lines>...\n    )\nbotocore.exceptions.WaiterError: Waiter StackCreateComplete failed: Waiter encountered a terminal failure state: For expression \"Stacks[].StackStatus\" we matched expected path: \"ROLLBACK_COMPLETE\" at least once",
+    "duration_ms": 2103.7,
+    "kind": "target_error",
+    "service": "dynamodb",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "WaiterError",
+      "function": "_deploy_cfn",
+      "source": "waiter.wait(StackName=stack_name, WaiterConfig={\"Delay\": 2, \"MaxAttempts\": 300})",
+      "statement": 3
+    },
+    "verdict": "error"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_deploy_cfn_stream_arn_captures_writes.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

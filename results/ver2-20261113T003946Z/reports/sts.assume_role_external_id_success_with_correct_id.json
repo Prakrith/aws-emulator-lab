@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "sts.assume-role-external-id-success-with-correct-id",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_assume_role_external_id_success_with_correct_id.py\", line 97, in run\n    assert creds[\"AccessKeyId\"].startswith(\"ASIA\"), (\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^\nAssertionError: temporary AssumeRole access key id must be in the ASIA class; got 'EMUL'",
+    "duration_ms": 100.8,
+    "kind": "failed",
+    "service": "sts",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert creds[\"AccessKeyId\"].startswith(\"ASIA\"), (",
+      "statement": 22
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_assume_role_external_id_success_with_correct_id.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "cloudformation.deep-cloudformation-1-cfn-enforce-warn-hook-flags-but-allows-unencrypted-queue-create",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_deep_cloudformation_1_cfn_enforce_warn_hook_flags_but_allows_unencrypted_queue_create.py\", line 63, in run\n    assert len(hook_events) == 1, (\n           ^^^^^^^^^^^^^^^^^^^^^\nAssertionError: expected exactly one HOOK_COMPLETE_FAILED stack event (the rule still fails under WARN), got [('sim2real-cfnenf-warn-b37f78c441fb', None), ('Q', None), ('Q', None), ('Q', None), ('sim2real-cfnenf-warn-b37f78c441fb', None)]",
+    "duration_ms": 10267.0,
+    "kind": "failed",
+    "service": "cloudformation",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert len(hook_events) == 1, (",
+      "statement": 20
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_deep_cloudformation_1_cfn_enforce_warn_hook_flags_but_allows_unencrypted_queue_create.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

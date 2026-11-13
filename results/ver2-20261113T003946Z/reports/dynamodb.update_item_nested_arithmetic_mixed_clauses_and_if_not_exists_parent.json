@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "dynamodb.update-item-nested-arithmetic-mixed-clauses-and-if-not-exists-parent",
+    "detail": "File \"context.py\", line 123, in wrapper\n    return func(*args, **kwargs)\n  File \"client.py\", line 1094, in _make_api_call\n    raise error_class(parsed_response, operation_name)\nbotocore.exceptions.ClientError: An error occurred (ValidationException) when calling the UpdateItem operation: 1 validation error detected: Invalid UpdateExpression: Syntax error; token: \"(\", near: \"= (a\"",
+    "duration_ms": 3098.6,
+    "kind": "target_error",
+    "service": "dynamodb",
+    "site": {
+      "error_code": "ValidationException",
+      "error_operation": "UpdateItem",
+      "error_status": 400,
+      "exception": "ClientError",
+      "function": "update",
+      "source": "return ddb.update_item(TableName=table, Key=key, UpdateExpression=expr,",
+      "statement": 10
+    },
+    "verdict": "error"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_update_item_nested_arithmetic_mixed_clauses_and_if_not_exists_parent.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

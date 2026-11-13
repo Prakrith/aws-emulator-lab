@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "batch.create-quota-share-duplicate-name-fails",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_create_quota_share_duplicate_name_fails.py\", line 41, in run\n    assert message == expected_message, f\"expected message {expected_message!r}, got {message!r}\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: expected message 'QuotaShare with name sim2real-batch-qs-8bbeffcbaa98 already exists for job queue arn:aws:batch:us-west-2:000000000000:job-queue/sim2real-batch-qmjq-6fd1e5a0d7dc', got 'Error executing request, Exception : Object already exists, RequestId: 8eb76f19-96ad-4eeb-ba78-f2eb6eb80392'",
+    "duration_ms": 6130.0,
+    "kind": "failed",
+    "service": "batch",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert message == expected_message, f\"expected message {expected_message!r}, got {message!r}\"",
+      "statement": 10
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_create_quota_share_duplicate_name_fails.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

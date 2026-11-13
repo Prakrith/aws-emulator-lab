@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "kinesis.list-shards-pagination-covers-all-shards-exactly-once",
+    "detail": "File \"context.py\", line 123, in wrapper\n    return func(*args, **kwargs)\n  File \"client.py\", line 1094, in _make_api_call\n    raise error_class(parsed_response, operation_name)\nbotocore.errorfactory.InvalidArgumentException: An error occurred (InvalidArgumentException) when calling the ListShards operation: StreamName cannot be specified together with NextToken, which already identifies what is being listed and where the listing resumes",
+    "duration_ms": 2118.9,
+    "kind": "target_error",
+    "service": "kinesis",
+    "site": {
+      "error_code": "InvalidArgumentException",
+      "error_operation": "ListShards",
+      "error_status": 400,
+      "exception": "InvalidArgumentException",
+      "function": "run",
+      "source": "with_name = [s[\"ShardId\"] for s in c.list_shards(StreamName=name, NextToken=token)[\"Shards\"]]",
+      "statement": 17
+    },
+    "verdict": "error"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_list_shards_pagination_covers_all_shards_exactly_once.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

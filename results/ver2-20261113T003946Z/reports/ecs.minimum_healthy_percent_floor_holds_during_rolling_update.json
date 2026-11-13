@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "ecs.minimum-healthy-percent-floor-holds-during-rolling-update",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_minimum_healthy_percent_floor_holds_during_rolling_update.py\", line 136, in run\n    assert subject_min >= floor, (\n           ^^^^^^^^^^^^^^^^^^^^\nAssertionError: minimumHealthyPercent=100 on desiredCount=2 means at least 2 tasks must stay RUNNING throughout the deployment, but runningCount fell to 0 (samples=[0, 0, 0, 0, 0, 2]) while the identically-updated control dipped to 0 as configured",
+    "duration_ms": 18329.6,
+    "kind": "failed",
+    "service": "ecs",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert subject_min >= floor, (",
+      "statement": 26
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_minimum_healthy_percent_floor_holds_during_rolling_update.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

@@ -1,0 +1,23 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "lambda.put-function-scaling-config-then-capacity-provider-list-reflects",
+    "detail": null,
+    "duration_ms": 6269.1,
+    "kind": "passed",
+    "service": "lambda",
+    "verdict": "passed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_put_function_scaling_config_then_capacity_provider_list_reflects.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

@@ -1,0 +1,23 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "kms.kms-rotated-key-still-decrypts-its-pre-rotation-ciphertext-and-reencrypt-to-self-rewraps-it",
+    "detail": null,
+    "duration_ms": 3123.9,
+    "kind": "passed",
+    "service": "kms",
+    "verdict": "passed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_kms_rotated_key_still_decrypts_its_pre_rotation_ciphertext_and_reencrypt_to_self_rewraps_it.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

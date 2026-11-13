@@ -1,0 +1,23 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "lambda.memory-size-seen-by-the-handler-tracks-a-configuration-update",
+    "detail": null,
+    "duration_ms": 4453.1,
+    "kind": "passed",
+    "service": "lambda",
+    "verdict": "passed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_memory_size_seen_by_the_handler_tracks_a_configuration_update.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

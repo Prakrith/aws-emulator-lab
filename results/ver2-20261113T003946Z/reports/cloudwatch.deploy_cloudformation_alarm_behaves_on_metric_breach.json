@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 600.0,
+    "check_id": "cloudwatch.deploy-cloudformation-alarm-behaves-on-metric-breach",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_deploy_cloudformation_alarm_behaves_on_metric_breach.py\", line 87, in run\n    assert len(described) == 1, \"stack claims CREATE_COMPLETE but alarm resource is absent\"\n           ^^^^^^^^^^^^^^^^^^^\nAssertionError: stack claims CREATE_COMPLETE but alarm resource is absent",
+    "duration_ms": 5125.6,
+    "kind": "failed",
+    "service": "cloudwatch",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert len(described) == 1, \"stack claims CREATE_COMPLETE but alarm resource is absent\"",
+      "statement": 15
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_deploy_cloudformation_alarm_behaves_on_metric_breach.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

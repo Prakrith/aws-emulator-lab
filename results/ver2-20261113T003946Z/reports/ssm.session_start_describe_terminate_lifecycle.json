@@ -1,0 +1,35 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "ssm.session-start-describe-terminate-lifecycle",
+    "cleanup_detail": "teardown ran while the timed-out test was still running",
+    "cleanup_failed": false,
+    "cleanup_ms": 10084.5,
+    "detail": "Check timed out after 60.0s",
+    "duration_ms": 60008.2,
+    "kind": "timeout",
+    "service": "ssm",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "Timeout",
+      "function": "_launch_managed_instance",
+      "source": "time.sleep(2)",
+      "statement": 2
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_session_start_describe_terminate_lifecycle.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

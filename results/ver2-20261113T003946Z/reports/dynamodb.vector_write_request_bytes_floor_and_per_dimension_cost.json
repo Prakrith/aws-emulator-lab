@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "dynamodb.vector-write-request-bytes-floor-and-per-dimension-cost",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_vector_write_request_bytes_floor_and_per_dimension_cost.py\", line 105, in run\n    assert 'idx-large' not in second_per_index, (\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: the large vector's value did not change, but idx-large was metered anyway: {'idx-large': {'VectorWriteRequestBytes': 16397.0}, 'idx-small': {'VectorWriteRequestBytes': 1024.0}}",
+    "duration_ms": 3118.2,
+    "kind": "failed",
+    "service": "dynamodb",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert 'idx-large' not in second_per_index, (",
+      "statement": 22
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_vector_write_request_bytes_floor_and_per_dimension_cost.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

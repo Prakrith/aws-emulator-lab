@@ -1,0 +1,35 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "rds.cluster-read-replica-promotion",
+    "cleanup_detail": "cleanup did not finish within 60.0s \u2014 resources may leak; teardown ran while the timed-out test was still running",
+    "cleanup_failed": true,
+    "cleanup_ms": 60006.1,
+    "detail": "Check timed out after 60.0s",
+    "duration_ms": 60008.5,
+    "kind": "timeout",
+    "service": "rds",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "Timeout",
+      "function": "_poll_until",
+      "source": "last = probe()",
+      "statement": 20
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_cluster_read_replica_promotion.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

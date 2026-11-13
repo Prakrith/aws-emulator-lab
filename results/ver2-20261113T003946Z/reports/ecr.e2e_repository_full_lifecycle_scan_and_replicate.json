@@ -1,0 +1,35 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "ecr.e2e-repository-full-lifecycle-scan-and-replicate",
+    "cleanup_detail": "teardown ran while the timed-out test was still running",
+    "cleanup_failed": false,
+    "cleanup_ms": 5.9,
+    "detail": "Check timed out after 60.0s",
+    "duration_ms": 60006.7,
+    "kind": "timeout",
+    "service": "ecr",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "Timeout",
+      "function": "_poll_until",
+      "source": "time.sleep(interval_s)",
+      "statement": 8
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_e2e_repository_full_lifecycle_scan_and_replicate.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

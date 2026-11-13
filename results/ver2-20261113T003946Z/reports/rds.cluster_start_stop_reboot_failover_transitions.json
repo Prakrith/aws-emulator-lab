@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "rds.cluster-start-stop-reboot-failover-transitions",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_cluster_start_stop_reboot_failover_transitions.py\", line 80, in run\n    assert code == \"InvalidParameterValue\", f\"expected InvalidParameterValue, got {code!r}\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: expected InvalidParameterValue, got 'NotImplemented'",
+    "duration_ms": 10326.3,
+    "kind": "failed",
+    "service": "rds",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert code == \"InvalidParameterValue\", f\"expected InvalidParameterValue, got {code!r}\"",
+      "statement": 14
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_cluster_start_stop_reboot_failover_transitions.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

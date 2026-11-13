@@ -1,0 +1,35 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "apigateway.usage-plan-key-throttle-override-window",
+    "cleanup_detail": "cleanup failed: RuntimeError(\"1 teardown(s) failed: BadRequestException('An error occurred (BadRequestException) when calling the DeleteUsagePlan operation: Cannot delete Usage Plan 8ib9n34r0l because there are API Stages associated with it, including eocd2yo7iw:test')\")",
+    "cleanup_failed": true,
+    "cleanup_ms": 5.0,
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_usage_plan_key_throttle_override_window.py\", line 74, in run\n    override_entry = with_override[\"apiStages\"][0][\"throttle\"][method_key]\n                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^\nKeyError: '/items/GET'",
+    "duration_ms": 82.7,
+    "kind": "target_error",
+    "service": "apigateway",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "KeyError",
+      "function": "run",
+      "source": "override_entry = with_override[\"apiStages\"][0][\"throttle\"][method_key]",
+      "statement": 29
+    },
+    "verdict": "error"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_usage_plan_key_throttle_override_window.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

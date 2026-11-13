@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "sagemaker.deploy-notebook-instance-cfn-presigned-url-works",
+    "detail": "File \"context.py\", line 123, in wrapper\n    return func(*args, **kwargs)\n  File \"client.py\", line 1094, in _make_api_call\n    raise error_class(parsed_response, operation_name)\nbotocore.exceptions.ClientError: An error occurred (ValidationException) when calling the DescribeNotebookInstance operation: RecordNotFound. Notebook Instance Arn: arn:aws:sagemaker:us-west-2:000000000000:notebook-instance/sim2real-nb-13ce75feeac7",
+    "duration_ms": 2226.3,
+    "kind": "target_error",
+    "service": "sagemaker",
+    "site": {
+      "error_code": "ValidationException",
+      "error_operation": "DescribeNotebookInstance",
+      "error_status": 400,
+      "exception": "ClientError",
+      "function": "<lambda>",
+      "source": "probe=lambda: sm.describe_notebook_instance(NotebookInstanceName=notebook_name)[\"NotebookInstanceStatus\"],",
+      "statement": 8
+    },
+    "verdict": "error"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_deploy_notebook_instance_cfn_presigned_url_works.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

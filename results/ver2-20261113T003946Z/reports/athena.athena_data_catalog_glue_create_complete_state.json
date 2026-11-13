@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "athena.athena-data-catalog-glue-create-complete-state",
+    "detail": "File \"context.py\", line 123, in wrapper\n    return func(*args, **kwargs)\n  File \"client.py\", line 1094, in _make_api_call\n    raise error_class(parsed_response, operation_name)\nbotocore.exceptions.ClientError: An error occurred (NotImplemented) when calling the ListDataCatalogs operation: operation ListDataCatalogs is scaffolded but not implemented in this emulator",
+    "duration_ms": 94.2,
+    "kind": "not_implemented",
+    "service": "athena",
+    "site": {
+      "error_code": "NotImplemented",
+      "error_operation": "ListDataCatalogs",
+      "error_status": 501,
+      "exception": "ClientError",
+      "function": "run",
+      "source": "names = [c[\"CatalogName\"] for c in athena.list_data_catalogs()[\"DataCatalogsSummary\"]]",
+      "statement": 13
+    },
+    "verdict": "error"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_athena_data_catalog_glue_create_complete_state.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

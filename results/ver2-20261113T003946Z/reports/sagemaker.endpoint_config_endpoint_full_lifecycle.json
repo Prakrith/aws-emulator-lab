@@ -1,0 +1,26 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "sagemaker.endpoint-config-endpoint-full-lifecycle",
+    "cleanup_detail": "cleanup failed: RuntimeError('2 teardown(s) failed: ClientError(\\'An error occurred (ValidationException) when calling the DeleteEndpoint operation: Could not find endpoint \"sim2real-behav-ep-792cdbc6a6b4\".\\'); ClientError(\\'An error occurred (ValidationException) when calling the DeleteEndpointConfig operation: Could not find endpoint configuration \"sim2real-behav-epcfg-9c8070474249\".\\')')",
+    "cleanup_failed": true,
+    "cleanup_ms": 41.7,
+    "detail": null,
+    "duration_ms": 15333.4,
+    "kind": "passed",
+    "service": "sagemaker",
+    "verdict": "passed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_endpoint_config_endpoint_full_lifecycle.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

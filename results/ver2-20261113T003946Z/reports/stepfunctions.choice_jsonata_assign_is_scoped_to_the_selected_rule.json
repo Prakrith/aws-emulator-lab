@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "stepfunctions.choice-jsonata-assign-is-scoped-to-the-selected-rule",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_choice_jsonata_assign_is_scoped_to_the_selected_rule.py\", line 212, in run\n    assert desc[\"status\"] == \"FAILED\", (\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: with only a state-level Assign, a MATCHED rule must leave $tag undefined and the execution must fail; input {'n': 50} gave status=SUCCEEDED output='{\"branch\":\"first\"}' -- a success here means the state-level Assign was wrongly applied to a matched branch",
+    "duration_ms": 4275.6,
+    "kind": "failed",
+    "service": "stepfunctions",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert desc[\"status\"] == \"FAILED\", (",
+      "statement": 7
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_choice_jsonata_assign_is_scoped_to_the_selected_rule.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

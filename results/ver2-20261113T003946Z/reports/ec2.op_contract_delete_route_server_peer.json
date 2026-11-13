@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "ec2.op-contract-delete-route-server-peer",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_op_contract_delete_route_server_peer.py\", line 125, in run\n    assert second_msg == expected_msg, f\"expected message {expected_msg!r}, got {second_msg!r}\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: expected message 'Route Server Peer rsp-0000000000000008e is in an invalid state.', got \"route-server-peer 'rsp-0000000000000008e' is in the 'deleted' state.\"",
+    "duration_ms": 15262.7,
+    "kind": "failed",
+    "service": "ec2",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert second_msg == expected_msg, f\"expected message {expected_msg!r}, got {second_msg!r}\"",
+      "statement": 31
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_op_contract_delete_route_server_peer.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

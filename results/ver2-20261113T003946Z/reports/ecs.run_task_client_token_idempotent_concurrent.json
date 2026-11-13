@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "ecs.run-task-client-token-idempotent-concurrent",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_run_task_client_token_idempotent_concurrent.py\", line 58, in run\n    assert len(unique_arns) < n_racers, (\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: expected clientToken idempotency to dedupe at least one of 6 concurrent racers sharing an identical token onto a shared task, but every racer launched a distinct task: {'arn:aws:ecs:us-west-2:000000000000:task/sim2real-behav-cluster-2a954f93a6d0/00000000000000000000000000000006', 'arn:aws:ecs:us-west-2:000000000000:task/sim2real-behav-cluster-2a954f93a6d0/00000000000000000000000000000005', 'arn:aws:ecs:us-west-2:000000000000:task/sim2real-behav-cluster-2a954f93a6d0/00000000000000000000000000000001', 'arn:aws:ecs:us-west-2:000000000000:task/sim2real-behav-cluster-2a954f93a6d0/00000000000000000000000000000002', 'arn:aws:ecs:us-west-2:000000000000:task/sim2real-behav-cluster-2a954f93a6d0/00000000000000000000000000000003', 'arn:aws:ecs:us-west-2:000000000000:task/sim2real-behav-cluster-2a954f93a6d0/00000000000000000000000000000004'}",
+    "duration_ms": 214.4,
+    "kind": "failed",
+    "service": "ecs",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert len(unique_arns) < n_racers, (",
+      "statement": 11
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_run_task_client_token_idempotent_concurrent.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

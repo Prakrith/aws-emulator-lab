@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "ecr.pull-through-cache-rule-upstream-repository-prefix-read-back",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_pull_through_cache_rule_upstream_repository_prefix_read_back.py\", line 81, in run\n    assert _fields(created_root) == expected_root, (\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: expected CreatePullThroughCacheRule to return {'ecrRepositoryPrefix': 'sim2real-root-a1766b0075ec', 'registryId': '000000000000', 'upstreamRegistryUrl': 'public.ecr.aws', 'upstreamRepositoryPrefix': 'ROOT'}, got {'ecrRepositoryPrefix': 'sim2real-root-a1766b0075ec', 'upstreamRegistryUrl': 'public.ecr.aws', 'createdAt': datetime.datetime(2026, 11, 12, 19, 9, 10, 13299, tzinfo=tzlocal()), 'registryId': '000000000000', 'upstreamRegistry': 'ecr-public', 'upstreamRepositoryPrefix': 'ROOT', 'ResponseMetadata': {'HTTPStatusCode': 200, 'HTTPHeaders': {'content-type': 'application/x-amz-json-1.1', 'content-length': '218', 'date': 'Fri, 13 Nov 2026 00:09:10 GMT'}, 'RetryAttempts': 0}}",
+    "duration_ms": 85.3,
+    "kind": "failed",
+    "service": "ecr",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert _fields(created_root) == expected_root, (",
+      "statement": 7
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_pull_through_cache_rule_upstream_repository_prefix_read_back.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

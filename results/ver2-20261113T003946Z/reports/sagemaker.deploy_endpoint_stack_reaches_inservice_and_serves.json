@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "sagemaker.deploy-endpoint-stack-reaches-inservice-and-serves",
+    "detail": "File \"context.py\", line 123, in wrapper\n    return func(*args, **kwargs)\n  File \"client.py\", line 1094, in _make_api_call\n    raise error_class(parsed_response, operation_name)\nbotocore.exceptions.ClientError: An error occurred (ValidationException) when calling the DescribeEndpoint operation: Could not find endpoint \"sim2real-sm-cfn-ep-56e24403b0d6\".",
+    "duration_ms": 35321.2,
+    "kind": "target_error",
+    "service": "sagemaker",
+    "site": {
+      "error_code": "ValidationException",
+      "error_operation": "DescribeEndpoint",
+      "error_status": 400,
+      "exception": "ClientError",
+      "function": "<lambda>",
+      "source": "probe=lambda: sm.describe_endpoint(EndpointName=endpoint_name),",
+      "statement": 13
+    },
+    "verdict": "error"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_deploy_endpoint_stack_reaches_inservice_and_serves.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

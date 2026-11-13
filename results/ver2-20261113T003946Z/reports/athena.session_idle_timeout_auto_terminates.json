@@ -1,0 +1,35 @@
+{
+  "check": {
+    "budget_s": 600.0,
+    "check_id": "athena.session-idle-timeout-auto-terminates",
+    "cleanup_detail": "cleanup failed: RuntimeError(\"1 teardown(s) failed: ClientError('An error occurred (NotImplemented) when calling the DeleteWorkGroup operation: operation DeleteWorkGroup is scaffolded but not implemented in this emulator')\")",
+    "cleanup_failed": true,
+    "cleanup_ms": 64.3,
+    "detail": "File \"check_session_idle_timeout_auto_terminates.py\", line 28, in run\n    session_id = _start_spark_session(ctx, wg_name, idle_timeout_minutes=idle_timeout_minutes)\n  File \"check_session_idle_timeout_auto_terminates.py\", line 192, in _start_spark_session\n    raise AssertionError(f\"StartSession never succeeded (IAM role propagation?): {last_error}\")\nAssertionError: StartSession never succeeded (IAM role propagation?): An error occurred (NotImplemented) when calling the StartSession operation: operation StartSession is scaffolded but not implemented in this emulator",
+    "duration_ms": 181297.2,
+    "kind": "failed",
+    "service": "athena",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "_start_spark_session",
+      "source": "raise AssertionError(f\"StartSession never succeeded (IAM role propagation?): {last_error}\")",
+      "statement": 6
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_session_idle_timeout_auto_terminates.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

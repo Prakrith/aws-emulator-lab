@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "cloudformation.stack-export-removal-while-imported-rolls-back-producer",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_stack_export_removal_while_imported_rolls_back_producer.py\", line 49, in run\n    assert stack_rows == [\n           ^^^^^^^^^^^^^^^\n    ...<5 lines>...\n    ], f\"producer stack events of the refused update: {stack_rows!r}\"\n    ^\nAssertionError: producer stack events of the refused update: [('UPDATE_IN_PROGRESS', 'User Initiated'), ('UPDATE_ROLLBACK_IN_PROGRESS', 'Update canceled. Cannot update export sim2real-cfn-exportrm-3b9aaa2a9310-used as it is in use by sim2real-cfn-exportrm-3b9aaa2a9310-consumer.'), ('UPDATE_ROLLBACK_COMPLETE_CLEANUP_IN_PROGRESS', None), ('UPDATE_ROLLBACK_COMPLETE', 'Update canceled. Cannot update export sim2real-cfn-exportrm-3b9aaa2a9310-used as it is in use by sim2real-cfn-exportrm-3b9aaa2a9310-consumer.')]",
+    "duration_ms": 12208.8,
+    "kind": "failed",
+    "service": "cloudformation",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert stack_rows == [",
+      "statement": 18
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_stack_export_removal_while_imported_rolls_back_producer.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

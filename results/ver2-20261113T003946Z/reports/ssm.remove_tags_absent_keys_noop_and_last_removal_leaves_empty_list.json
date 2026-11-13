@@ -1,0 +1,23 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "ssm.remove-tags-absent-keys-noop-and-last-removal-leaves-empty-list",
+    "detail": null,
+    "duration_ms": 150.3,
+    "kind": "passed",
+    "service": "ssm",
+    "verdict": "passed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_remove_tags_absent_keys_noop_and_last_removal_leaves_empty_list.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

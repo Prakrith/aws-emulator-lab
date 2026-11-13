@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "ecs.put-attributes-empty-string-value-preserved",
+    "detail": "File \"context.py\", line 123, in wrapper\n    return func(*args, **kwargs)\n  File \"client.py\", line 1094, in _make_api_call\n    raise error_class(parsed_response, operation_name)\nbotocore.errorfactory.ParameterNotFound: An error occurred (ParameterNotFound) when calling the GetParameter operation:",
+    "duration_ms": 217.3,
+    "kind": "target_error",
+    "service": "ecs",
+    "site": {
+      "error_code": "ParameterNotFound",
+      "error_operation": "GetParameter",
+      "error_status": 400,
+      "exception": "ParameterNotFound",
+      "function": "_launch_container_instance",
+      "source": "ami_param = ssm.get_parameter(Name=\"/aws/service/ecs/optimized-ami/amazon-linux-2/recommended\")",
+      "statement": 6
+    },
+    "verdict": "error"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_put_attributes_empty_string_value_preserved.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

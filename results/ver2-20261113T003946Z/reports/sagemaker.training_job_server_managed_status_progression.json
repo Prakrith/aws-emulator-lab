@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "sagemaker.training-job-server-managed-status-progression",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_training_job_server_managed_status_progression.py\", line 59, in run\n    assert final[\"TrainingJobStatus\"] == \"Failed\", (\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: expected the /bin/false entrypoint to fail the job, got Completed",
+    "duration_ms": 10268.7,
+    "kind": "failed",
+    "service": "sagemaker",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert final[\"TrainingJobStatus\"] == \"Failed\", (",
+      "statement": 13
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_training_job_server_managed_status_progression.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

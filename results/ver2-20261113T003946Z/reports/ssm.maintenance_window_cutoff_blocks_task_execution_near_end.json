@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 600.0,
+    "check_id": "ssm.maintenance-window-cutoff-blocks-task-execution-near-end",
+    "detail": "File \"check_maintenance_window_cutoff_blocks_task_execution_near_end.py\", line 215, in _launch_ssm_managed_instance\n    _wait_for_agent_online(ctx, instance_id)\n    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^\n  File \"check_maintenance_window_cutoff_blocks_task_execution_near_end.py\", line 139, in _wait_for_agent_online\n    raise AssertionError(\n    ...<2 lines>...\n    )\nAssertionError: instance i-00000000000000001 never reached PingStatus=Online within 540s (SSM Agent never registered)",
+    "duration_ms": 540990.3,
+    "kind": "failed",
+    "service": "ssm",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "_wait_for_agent_online",
+      "source": "raise AssertionError(",
+      "statement": 2
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_maintenance_window_cutoff_blocks_task_execution_near_end.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

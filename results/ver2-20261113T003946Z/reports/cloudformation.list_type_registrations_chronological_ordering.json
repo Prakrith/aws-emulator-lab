@@ -1,0 +1,26 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "cloudformation.list-type-registrations-chronological-ordering",
+    "cleanup_detail": "cleanup failed: RuntimeError('1 teardown(s) failed: TypeNotFoundException(\"An error occurred (TypeNotFoundException) when calling the DeregisterType operation: The type \\'S2ROrd::Orda99bb4dd2dc9::Behav::MODULE\\' cannot be found.\")')",
+    "cleanup_failed": true,
+    "cleanup_ms": 25.0,
+    "detail": null,
+    "duration_ms": 15225.0,
+    "kind": "passed",
+    "service": "cloudformation",
+    "verdict": "passed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_list_type_registrations_chronological_ordering.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

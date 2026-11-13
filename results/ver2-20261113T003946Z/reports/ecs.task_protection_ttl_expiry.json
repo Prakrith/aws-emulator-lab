@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 600.0,
+    "check_id": "ecs.task-protection-ttl-expiry",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_task_protection_ttl_expiry.py\", line 157, in run\n    assert error == expected, f\"expected {expected!r}, got {error!r}\"\n           ^^^^^^^^^^^^^^^^^\nAssertionError: expected ('InvalidParameterException', 'Invalid identifier: cluster identifiers mismatch'), got ('ClusterNotFoundException', 'Cluster not found.')",
+    "duration_ms": 10296.6,
+    "kind": "failed",
+    "service": "ecs",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert error == expected, f\"expected {expected!r}, got {error!r}\"",
+      "statement": 22
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_task_protection_ttl_expiry.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "rds.e2e-activity-stream-start-stop-delivery-target",
+    "detail": "File \"context.py\", line 123, in wrapper\n    return func(*args, **kwargs)\n  File \"client.py\", line 1094, in _make_api_call\n    raise error_class(parsed_response, operation_name)\nbotocore.exceptions.ClientError: An error occurred (NotImplemented) when calling the StartActivityStream operation: operation StartActivityStream is scaffolded but not implemented in this emulator",
+    "duration_ms": 2297.8,
+    "kind": "not_implemented",
+    "service": "rds",
+    "site": {
+      "error_code": "NotImplemented",
+      "error_operation": "StartActivityStream",
+      "error_status": 501,
+      "exception": "ClientError",
+      "function": "run",
+      "source": "rds.start_activity_stream(",
+      "statement": 21
+    },
+    "verdict": "error"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_e2e_activity_stream_start_stop_delivery_target.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

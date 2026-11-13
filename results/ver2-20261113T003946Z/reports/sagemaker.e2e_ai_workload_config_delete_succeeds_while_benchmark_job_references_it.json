@@ -1,0 +1,35 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "sagemaker.e2e-ai-workload-config-delete-succeeds-while-benchmark-job-references-it",
+    "cleanup_detail": "cleanup failed: RuntimeError(\"1 teardown(s) failed: ClientError('An error occurred (NotImplemented) when calling the StopAIBenchmarkJob operation: operation StopAIBenchmarkJob is scaffolded but not implemented in this emulator')\")",
+    "cleanup_failed": true,
+    "cleanup_ms": 39.7,
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_e2e_ai_workload_config_delete_succeeds_while_benchmark_job_references_it.py\", line 185, in run\n    assert running_delete_code == \"ValidationException\", (\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: expected DeleteAIBenchmarkJob on an InProgress job to be rejected with ValidationException, got 'NotImplemented'",
+    "duration_ms": 15322.4,
+    "kind": "failed",
+    "service": "sagemaker",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert running_delete_code == \"ValidationException\", (",
+      "statement": 42
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_e2e_ai_workload_config_delete_succeeds_while_benchmark_job_references_it.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

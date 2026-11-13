@@ -1,0 +1,23 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "cloudformation.change-set-parameter-change-through-ref-chain-classifies-sources",
+    "detail": null,
+    "duration_ms": 9169.8,
+    "kind": "passed",
+    "service": "cloudformation",
+    "verdict": "passed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_change_set_parameter_change_through_ref_chain_classifies_sources.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

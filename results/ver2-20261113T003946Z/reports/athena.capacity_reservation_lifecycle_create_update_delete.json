@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "athena.capacity-reservation-lifecycle-create-update-delete",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_capacity_reservation_lifecycle_create_update_delete.py\", line 63, in run\n    assert message == not_found, repr(message)\n           ^^^^^^^^^^^^^^^^^^^^\nAssertionError: 'CapacityReservation sim2real-behav-capres-37a28511e4b6 was not found.'",
+    "duration_ms": 25140.7,
+    "kind": "failed",
+    "service": "athena",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert message == not_found, repr(message)",
+      "statement": 22
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_capacity_reservation_lifecycle_create_update_delete.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

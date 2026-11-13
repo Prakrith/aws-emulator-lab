@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "kinesis.put-record-then-get-records-round-trip-over-a-hand-signed-http2-request",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_put_record_then_get_records_round_trip_over_a_hand_signed_http2_request.py\", line 85, in run\n    assert put_meta[\"error\"] is None, (\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: PutRecord over hand-signed HTTP/2 to https://127.0.0.1:9401 failed: 'stream: The pending stream has been canceled (caused by: 80FF7CF101000000:error:0A000460:SSL routines:ssl3_read_bytes:tlsv1 alert no application protocol:ssl/record/rec_layer_s3.c:910:SSL alert number 120\\n)'",
+    "duration_ms": 3344.4,
+    "kind": "failed",
+    "service": "kinesis",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert put_meta[\"error\"] is None, (",
+      "statement": 8
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_put_record_then_get_records_round_trip_over_a_hand_signed_http2_request.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

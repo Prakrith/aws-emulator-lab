@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "cloudformation.retain-except-on-create-deletes-on-failed-create-retains-on-delete",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_retain_except_on_create_deletes_on_failed_create_retains_on_delete.py\", line 82, in run\n    assert \"DELETE_SKIPPED\" in _resource_states(cfn, stacks[\"reoc-ok\"], \"P\"), (\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: a retained resource is DELETE_SKIPPED; P event statuses were ['DELETE_COMPLETE', 'DELETE_IN_PROGRESS', 'CREATE_COMPLETE', 'CREATE_IN_PROGRESS', 'CREATE_IN_PROGRESS']",
+    "duration_ms": 12251.5,
+    "kind": "failed",
+    "service": "cloudformation",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert \"DELETE_SKIPPED\" in _resource_states(cfn, stacks[\"reoc-ok\"], \"P\"), (",
+      "statement": 21
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_retain_except_on_create_deletes_on_failed_create_retains_on_delete.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

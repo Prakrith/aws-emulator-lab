@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "glue.dashboard-url-returns-valid-endpoint",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_dashboard_url_returns_valid_endpoint.py\", line 53, in run\n    assert message == \"Entity not found\", f\"unexpected not-found message {message!r}\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: unexpected not-found message 'Session sim2real-glue-dash-missing-1131e4ab4a29 not found.'",
+    "duration_ms": 10152.6,
+    "kind": "failed",
+    "service": "glue",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert message == \"Entity not found\", f\"unexpected not-found message {message!r}\"",
+      "statement": 14
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_dashboard_url_returns_valid_endpoint.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

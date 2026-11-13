@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "batch.job-retry-strategy-evaluate-on-exit-controls-attempt-count",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_job_retry_strategy_evaluate_on_exit_controls_attempt_count.py\", line 442, in run\n    assert len(rattempts) == 2, (\n           ^^^^^^^^^^^^^^^^^^^\nAssertionError: onExitCode 3 -> RETRY with attempts=2 must record exactly 2 attempts, got 1 (an emulator that ignores retryStrategy records 1); statusReason=\"This emulator does not run containers, so the job's container was never started\" container={'image': 'public.ecr.aws/docker/library/busybox:1.36', 'command': ['/bin/sh', '-c', 'exit 3'], 'executionRoleArn': 'arn:aws:iam::000000000000:role/sim2real-behav-batch-exec-2736a37491f4', 'reason': \"This emulator does not run containers, so the job's container was never started\", 'taskArn': 'arn:aws:ecs:us-west-2:000000000000:task/sim2real-behav-ce-fg-f9241e31fa1c/d9c17cf98eb244e1bfe358edd2324d02', 'logStreamName': 'sim2real-behav-jd-fg-9e506e9de012/default/d9c17cf98eb244e1bfe358edd2324d02', 'resourceRequirements': [{'value': '0.25', 'type': 'VCPU'}, {'value': '512', 'type': 'MEMORY'}], 'networkConfiguration': {'assignPublicIp': 'ENABLED'}, 'fargatePlatformConfiguration': {'platformVersion': 'LATEST'}}",
+    "duration_ms": 18328.9,
+    "kind": "failed",
+    "service": "batch",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert len(rattempts) == 2, (",
+      "statement": 13
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_job_retry_strategy_evaluate_on_exit_controls_attempt_count.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

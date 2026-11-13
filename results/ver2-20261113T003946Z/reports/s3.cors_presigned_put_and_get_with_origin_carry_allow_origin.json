@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "s3.cors-presigned-put-and-get-with-origin-carry-allow-origin",
+    "detail": "File \"check_cors_presigned_put_and_get_with_origin_carry_allow_origin.py\", line 51, in run\n    _until_status(ctx, _object_url(ctx, bucket, _KEY),\n    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n                  {\"Origin\": _ORIGIN, \"Access-Control-Request-Method\": \"PUT\"}, 200)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"check_cors_presigned_put_and_get_with_origin_carry_allow_origin.py\", line 127, in _until_status\n    raise AssertionError(\n    ...<2 lines>...\n    )\nAssertionError: the preflight with {'Origin': 'https://app.example.com', 'Access-Control-Request-Method': 'PUT'} answered 501, not 200, for 20s: b'<?xml version=\"1.0\"?><Error><Code>NotImplemented</Code><Message>operation OPTIONS /sim2real-behav-bkt-5879b44b2f3e/uploads/report.json is not implemented in this emulator</Message><RequestId>396c6170-453c-4075-a2c9-bbf36b65f376</RequestId><HostId>f8a32c807e834f4e912e7da89f16e1e6f2b9330c40664a8cad221'",
+    "duration_ms": 20217.9,
+    "kind": "failed",
+    "service": "s3",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "_until_status",
+      "source": "raise AssertionError(",
+      "statement": 8
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_cors_presigned_put_and_get_with_origin_carry_allow_origin.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

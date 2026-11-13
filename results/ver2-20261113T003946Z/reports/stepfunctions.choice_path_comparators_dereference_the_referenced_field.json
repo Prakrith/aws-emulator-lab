@@ -1,0 +1,23 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "stepfunctions.choice-path-comparators-dereference-the-referenced-field",
+    "detail": null,
+    "duration_ms": 6819.1,
+    "kind": "passed",
+    "service": "stepfunctions",
+    "verdict": "passed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_choice_path_comparators_dereference_the_referenced_field.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

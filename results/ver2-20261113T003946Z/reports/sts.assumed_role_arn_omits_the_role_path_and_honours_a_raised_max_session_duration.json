@@ -1,0 +1,23 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "sts.assumed-role-arn-omits-the-role-path-and-honours-a-raised-max-session-duration",
+    "detail": null,
+    "duration_ms": 216.1,
+    "kind": "passed",
+    "service": "sts",
+    "verdict": "passed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_assumed_role_arn_omits_the_role_path_and_honours_a_raised_max_session_duration.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

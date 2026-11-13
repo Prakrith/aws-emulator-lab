@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "stepfunctions.conc-distributed-map-200-s3-objects-processed-once-under-concurrency-cap",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_conc_distributed_map_200_s3_objects_processed_once_under_concurrency_cap.py\", line 125, in run\n    assert exe[\"status\"] == \"SUCCEEDED\", (\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: execution was 'FAILED': 'States.ExceedToleratedFailureThreshold' \"1 of 200 items failed, more than this 'Map' state tolerates\"",
+    "duration_ms": 45876.6,
+    "kind": "failed",
+    "service": "stepfunctions",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert exe[\"status\"] == \"SUCCEEDED\", (",
+      "statement": 15
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_conc_distributed_map_200_s3_objects_processed_once_under_concurrency_cap.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "lambda.log-tail-node-text-console-lines-are-tab-framed",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_log_tail_node_text_console_lines_are_tab_framed.py\", line 67, in run\n    assert got == want, f\"framed (level, message) must be {want!r}; got {got!r}\"\n           ^^^^^^^^^^^\nAssertionError: framed (level, message) must be [('INFO', 'L-m-2b8facc4e09e'), ('WARN', 'W-m-2b8facc4e09e'), ('ERROR', 'E-m-2b8facc4e09e'), ('INFO', 'ML1-m-2b8facc4e09e'), ('INFO', \"{ marker: 'm-2b8facc4e09e', n: 1 }\")]; got []",
+    "duration_ms": 2221.9,
+    "kind": "failed",
+    "service": "lambda",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert got == want, f\"framed (level, message) must be {want!r}; got {got!r}\"",
+      "statement": 16
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_log_tail_node_text_console_lines_are_tab_framed.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

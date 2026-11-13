@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "sts.assume-role-session-tag-unicode-value-round-trip",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_assume_role_session_tag_unicode_value_round_trip.py\", line 70, in run\n    assert code == \"AccessDenied\", (\n           ^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: a session tag value that does not match the policy condition's exact unicode string must deny s3:ListAllMyBuckets with AccessDenied; got '(no error: the call succeeded)'",
+    "duration_ms": 202.8,
+    "kind": "failed",
+    "service": "sts",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert code == \"AccessDenied\", (",
+      "statement": 16
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_assume_role_session_tag_unicode_value_round_trip.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

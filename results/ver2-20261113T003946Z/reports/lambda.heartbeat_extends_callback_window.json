@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 600.0,
+    "check_id": "lambda.heartbeat-extends-callback-window",
+    "detail": "File \"check_heartbeat_extends_callback_window.py\", line 258, in _receive_one\n    messages = _poll_until(\n        _poll, lambda m: bool(m), timeout_s=timeout_s, interval_s=1.0,\n        description=f\"a message to arrive on {queue_url}\",\n    )\n  File \"check_heartbeat_extends_callback_window.py\", line 118, in _poll_until\n    raise AssertionError(f\"{description} not met within {timeout_s}s. Last result: {last!r}\")\nAssertionError: a message to arrive on https://sqs.us-west-2.amazonaws.com/000000000000/sim2real-behav-dest-q-6b33565c4a5f not met within 60s. Last result: None",
+    "duration_ms": 64305.2,
+    "kind": "failed",
+    "service": "lambda",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "_poll_until",
+      "source": "raise AssertionError(f\"{description} not met within {timeout_s}s. Last result: {last!r}\")",
+      "statement": 9
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_heartbeat_extends_callback_window.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

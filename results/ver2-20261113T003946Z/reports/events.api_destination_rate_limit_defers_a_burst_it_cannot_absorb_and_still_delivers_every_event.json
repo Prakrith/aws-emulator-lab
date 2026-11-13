@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 600.0,
+    "check_id": "events.api-destination-rate-limit-defers-a-burst-it-cannot-absorb-and-still-delivers-every-event",
+    "detail": "File \"check_api_destination_rate_limit_defers_a_burst_it_cannot_absorb_and_still_delivers_every_event.py\", line 50, in run\n    _wait_live(ctx, events, bus, source, capture_url)\n    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"check_api_destination_rate_limit_defers_a_burst_it_cannot_absorb_and_still_delivers_every_event.py\", line 102, in _wait_live\n    raise AssertionError(f\"none of {len(sent)} liveness event(s) reached the endpoint within 180s\")\nAssertionError: none of 9 liveness event(s) reached the endpoint within 180s",
+    "duration_ms": 185859.7,
+    "kind": "failed",
+    "service": "events",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "_wait_live",
+      "source": "raise AssertionError(f\"none of {len(sent)} liveness event(s) reached the endpoint within 180s\")",
+      "statement": 15
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_api_destination_rate_limit_defers_a_burst_it_cannot_absorb_and_still_delivers_every_event.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

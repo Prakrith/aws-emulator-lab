@@ -1,0 +1,26 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "s3.bucket-metadata-table-configuration-lifecycle",
+    "cleanup_detail": "cleanup failed: RuntimeError(\"1 teardown(s) failed: BadRequestException('An error occurred (BadRequestException) when calling the ListTables operation: The specified namespace name isn\u2019t valid. Specify a different namespace name, and then try again.')\")",
+    "cleanup_failed": true,
+    "cleanup_ms": 58.9,
+    "detail": null,
+    "duration_ms": 161.3,
+    "kind": "passed",
+    "service": "s3",
+    "verdict": "passed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_bucket_metadata_table_configuration_lifecycle.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

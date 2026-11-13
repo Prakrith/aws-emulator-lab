@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "ssm.compliance-summary-server-computed-aggregation",
+    "detail": "File \"check_compliance_summary_server_computed_aggregation.py\", line 212, in _launch_ssm_managed_instance\n    _wait_for_agent_online(ctx, instance_id)\n    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^\n  File \"check_compliance_summary_server_computed_aggregation.py\", line 135, in _wait_for_agent_online\n    raise AssertionError(\n    ...<2 lines>...\n    )\nAssertionError: instance i-00000000000000001 never reached PingStatus=Online within 1s (SSM Agent never registered)",
+    "duration_ms": 15337.5,
+    "kind": "failed",
+    "service": "ssm",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "_wait_for_agent_online",
+      "source": "raise AssertionError(",
+      "statement": 2
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_compliance_summary_server_computed_aggregation.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

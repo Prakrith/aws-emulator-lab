@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "cloudwatch.get-metric-data-pagination-budgets-time-slots-and-binds-the-token-to-the-query",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_get_metric_data_pagination_budgets_time_slots_and_binds_the_token_to_the_query.py\", line 92, in run\n    assert per_page == [[1.0], [2.0, 3.0], [4.0, 5.0], [6.0], [], []], (\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: expected MaxDatapoints=2 to budget the 11 minute slots (empty ones included), got pages [[1.0, 2.0], [3.0, 4.0], [5.0, 6.0]]",
+    "duration_ms": 70.4,
+    "kind": "failed",
+    "service": "cloudwatch",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert per_page == [[1.0], [2.0, 3.0], [4.0, 5.0], [6.0], [], []], (",
+      "statement": 11
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_get_metric_data_pagination_budgets_time_slots_and_binds_the_token_to_the_query.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

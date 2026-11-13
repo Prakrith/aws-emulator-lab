@@ -1,0 +1,35 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "ec2.transit-gateway-route-table-association-moves-between-tables",
+    "cleanup_detail": "cleanup failed: RuntimeError(\"2 teardown(s) failed: ClientError('An error occurred (NotImplemented) when calling the DeleteTransitGatewayVpcAttachment operation: operation DeleteTransitGatewayVpcAttachment is scaffolded but not implemented in this emulator'); ClientError('An error occurred (IncorrectState) when calling the DeleteTransitGateway operation: tgw-00000000000000099 has non-deleted Transit Gateway Attachments and cannot be deleted.')\"); teardown ran while the timed-out test was still running",
+    "cleanup_failed": true,
+    "cleanup_ms": 18.4,
+    "detail": "Check timed out after 60.0s",
+    "duration_ms": 60005.0,
+    "kind": "timeout",
+    "service": "ec2",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "Timeout",
+      "function": "_poll",
+      "source": "time.sleep(interval_s)",
+      "statement": 9
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_transit_gateway_route_table_association_moves_between_tables.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

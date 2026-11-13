@@ -1,0 +1,23 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "dynamodb.put-item-omitting-a-gsi-key-is-a-sparse-write",
+    "detail": null,
+    "duration_ms": 3093.6,
+    "kind": "passed",
+    "service": "dynamodb",
+    "verdict": "passed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_put_item_omitting_a_gsi_key_is_a_sparse_write.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

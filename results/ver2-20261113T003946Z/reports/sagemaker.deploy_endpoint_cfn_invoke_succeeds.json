@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "sagemaker.deploy-endpoint-cfn-invoke-succeeds",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_deploy_endpoint_cfn_invoke_succeeds.py\", line 22, in run\n    from sagemaker import image_uris\nImportError: cannot import name 'image_uris' from 'sagemaker' (/private/tmp/claude-501/-Users-prak-git-aws-emulator-lab/bde8facd-71c8-4290-b55e-40b0bed86e8f/scratchpad/suite/.venv/lib/python3.13/site-packages/sagemaker/__init__.py)",
+    "duration_ms": 6916.5,
+    "kind": "runner_fault",
+    "service": "sagemaker",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "ImportError",
+      "function": "run",
+      "source": "from sagemaker import image_uris",
+      "statement": 1
+    },
+    "verdict": "error"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_deploy_endpoint_cfn_invoke_succeeds.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

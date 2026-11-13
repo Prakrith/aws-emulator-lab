@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "ecr.registry-scanning-configuration-lifecycle",
+    "detail": "File \"check_registry_scanning_configuration_lifecycle.py\", line 59, in run\n    batch_resp = _poll_until(\n        lambda: ecr.batch_get_repository_scanning_configuration(repositoryNames=[repo_name]),\n    ...<5 lines>...\n        timeout_s=30.0,\n    )\n  File \"check_registry_scanning_configuration_lifecycle.py\", line 93, in _poll_until\n    raise AssertionError(f\"condition not met within {timeout_s}s (last value: {value!r})\")\nAssertionError: condition not met within 30.0s (last value: {'scanningConfigurations': [{'repositoryArn': 'arn:aws:ecr:us-west-2:000000000000:repository/sim2real-ecr-scanconf-7626594b3f1f', 'repositoryName': 'sim2real-ecr-scanconf-7626594b3f1f', 'scanOnPush': False, 'scanFrequency': 'MANUAL', 'appliedScanFilters': []}], 'failures': [], 'ResponseMetadata': {'HTTPStatusCode': 200, 'HTTPHeaders': {'content-type': 'application/x-amz-json-1.1', 'content-length': '265', 'date': 'Fri, 13 Nov 2026 01:20:11 GMT'}, 'RetryAttempts': 0}})",
+    "duration_ms": 30290.9,
+    "kind": "failed",
+    "service": "ecr",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "_poll_until",
+      "source": "raise AssertionError(f\"condition not met within {timeout_s}s (last value: {value!r})\")",
+      "statement": 16
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_registry_scanning_configuration_lifecycle.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

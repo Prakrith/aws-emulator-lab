@@ -1,0 +1,35 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "sagemaker.notebook-instance-create-stop-delete-lifecycle",
+    "cleanup_detail": "cleanup failed: RuntimeError(\"1 teardown(s) failed: ClientError('An error occurred (NotImplemented) when calling the DeleteNotebookInstance operation: operation DeleteNotebookInstance is scaffolded but not implemented in this emulator')\")",
+    "cleanup_failed": true,
+    "cleanup_ms": 12.9,
+    "detail": "File \"context.py\", line 123, in wrapper\n    return func(*args, **kwargs)\n  File \"client.py\", line 1094, in _make_api_call\n    raise error_class(parsed_response, operation_name)\nbotocore.exceptions.ClientError: An error occurred (NotImplemented) when calling the DeleteNotebookInstance operation: operation DeleteNotebookInstance is scaffolded but not implemented in this emulator",
+    "duration_ms": 30227.6,
+    "kind": "not_implemented",
+    "service": "sagemaker",
+    "site": {
+      "error_code": "NotImplemented",
+      "error_operation": "DeleteNotebookInstance",
+      "error_status": 501,
+      "exception": "ClientError",
+      "function": "run",
+      "source": "sm.delete_notebook_instance(NotebookInstanceName=name)",
+      "statement": 14
+    },
+    "verdict": "error"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_notebook_instance_create_stop_delete_lifecycle.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

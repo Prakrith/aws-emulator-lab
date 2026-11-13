@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 600.0,
+    "check_id": "ssm.e2e-maintenance-window-execution-history-flow",
+    "detail": "File \"check_e2e_maintenance_window_execution_history_flow.py\", line 257, in _create_ssm_managed_instance\n    _poll_until(\n    ~~~~~~~~~~~^\n        _ping_probe,\n        ^^^^^^^^^^^^\n    ...<2 lines>...\n        interval_s=10.0,\n        ^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"check_e2e_maintenance_window_execution_history_flow.py\", line 168, in _poll_until\n    raise AssertionError(f\"condition never satisfied, last value={value!r}\")\nAssertionError: condition never satisfied, last value=None",
+    "duration_ms": 428702.2,
+    "kind": "failed",
+    "service": "ssm",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "_poll_until",
+      "source": "raise AssertionError(f\"condition never satisfied, last value={value!r}\")",
+      "statement": 2
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_e2e_maintenance_window_execution_history_flow.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

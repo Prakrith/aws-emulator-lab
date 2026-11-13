@@ -1,0 +1,8 @@
+runner: fidelity-tests-runner 1.0.0
+suite commit: 4df2823bafface2ada35f482c07ff6668cc078e1
+emulator: 1.0.338 commit 32b3cf39b49b34d906693dfa43539d42886b562b
+uv: uv 0.13.7 (Homebrew 2026-11-03 aarch64-apple-darwin)
+selection: python3 -I scripts/select_tests.py <suite-dir> 40 tests.txt excluded.txt
+run: python3 -I scripts/run_fidelity.py <suite-dir> results/ver2-20261113T003946Z tests.txt 2
+started: 2026-11-13T00:39:51Z
+finished: 2026-11-13T10:01:06Z

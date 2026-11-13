@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 600.0,
+    "check_id": "events.lambda-target-function-error-is-retried-by-lambda-and-never-dead-lettered-by-the-rule",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_lambda_target_function_error_is_retried_by_lambda_and_never_dead_lettered_by_the_rule.py\", line 82, in run\n    assert mine, (\n           ^^^^\nAssertionError: no OnFailure destination record arrived within 300.0s for any of the 5 event(s) sent; 0 other record(s)",
+    "duration_ms": 302965.0,
+    "kind": "failed",
+    "service": "events",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert mine, (",
+      "statement": 23
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_lambda_target_function_error_is_retried_by_lambda_and_never_dead_lettered_by_the_rule.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

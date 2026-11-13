@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "s3.s3checksum-incompatible-algorithm-and-type-pairs-rejected",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_s3checksum_incompatible_algorithm_and_type_pairs_rejected.py\", line 133, in run\n    assert sha_message == (\n           ^^^^^^^^^^^^^^^^\n        \"The FULL_OBJECT checksum type cannot be used with the sha256 checksum algorithm.\"\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ), f\"the SHA256 + FULL_OBJECT refusal's message is {sha_message!r}\"\n    ^\nAssertionError: the SHA256 + FULL_OBJECT refusal's message is \"A parameter or header in your request isn't valid. For details, see the description of this API operation.\"",
+    "duration_ms": 128.0,
+    "kind": "failed",
+    "service": "s3",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert sha_message == (",
+      "statement": 10
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_s3checksum_incompatible_algorithm_and_type_pairs_rejected.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "s3.directory-bucket-multipart-complete-etag-is-not-an-md5-composite",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_directory_bucket_multipart_complete_etag_is_not_an_md5_composite.py\", line 125, in run\n    assert dir_etag != want_twin_etag, (\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: the directory bucket's multipart ETag '\"4c3969d0421775aa0e47fb78391fbaa9-2\"' equals md5(md5(p1)||md5(p2))-2 '\"4c3969d0421775aa0e47fb78391fbaa9-2\"' for the identical bytes; want it to differ",
+    "duration_ms": 462.6,
+    "kind": "failed",
+    "service": "s3",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert dir_etag != want_twin_etag, (",
+      "statement": 11
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_directory_bucket_multipart_complete_etag_is_not_an_md5_composite.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

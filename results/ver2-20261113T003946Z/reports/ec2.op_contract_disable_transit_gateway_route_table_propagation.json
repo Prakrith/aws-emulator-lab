@@ -1,0 +1,26 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "ec2.op-contract-disable-transit-gateway-route-table-propagation",
+    "cleanup_detail": "cleanup failed: RuntimeError(\"2 teardown(s) failed: ClientError('An error occurred (NotImplemented) when calling the DeleteTransitGatewayVpcAttachment operation: operation DeleteTransitGatewayVpcAttachment is scaffolded but not implemented in this emulator'); ClientError('An error occurred (NotImplemented) when calling the DeleteTransitGatewayVpcAttachment operation: operation DeleteTransitGatewayVpcAttachment is scaffolded but not implemented in this emulator')\")",
+    "cleanup_failed": true,
+    "cleanup_ms": 25.3,
+    "detail": null,
+    "duration_ms": 30328.8,
+    "kind": "passed",
+    "service": "ec2",
+    "verdict": "passed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_op_contract_disable_transit_gateway_route_table_propagation.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

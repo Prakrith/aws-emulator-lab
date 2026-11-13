@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "events.deploy-cfn-bus-target-with-a-stack-created-execution-role-forwards-events-to-the-destination-bus",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_deploy_cfn_bus_target_with_a_stack_created_execution_role_forwards_events_to_the_destination_bus.py\", line 33, in run\n    assert status == \"CREATE_COMPLETE\", f\"stack create ended {status!r}: {_failure_reasons(cfn, stack)!r}\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: stack create ended 'ROLLBACK_COMPLETE': ['Resource handler returned message: \"Event bus sim2real-evb-b2bsrc-35fd1dd533c4 does not exist.\" (RequestToken: 8e34e98a-b23e-a46c-eb30-0590422fd407, HandlerErrorCode: NotFound)', 'Resource handler returned message: \"Event bus sim2real-evb-b2bdst-093549e30a3f does not exist.\" (RequestToken: 14ec18ba-7720-ab06-eb2b-dc1222ebb3e1, HandlerErrorCode: NotFound)']",
+    "duration_ms": 5149.8,
+    "kind": "failed",
+    "service": "events",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert status == \"CREATE_COMPLETE\", f\"stack create ended {status!r}: {_failure_reasons(cfn, stack)!r}\"",
+      "statement": 9
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_deploy_cfn_bus_target_with_a_stack_created_execution_role_forwards_events_to_the_destination_bus.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

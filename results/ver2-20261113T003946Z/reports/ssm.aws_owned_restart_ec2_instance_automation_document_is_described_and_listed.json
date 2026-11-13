@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "ssm.aws-owned-restart-ec2-instance-automation-document-is-described-and-listed",
+    "detail": "File \"context.py\", line 123, in wrapper\n    return func(*args, **kwargs)\n  File \"client.py\", line 1094, in _make_api_call\n    raise error_class(parsed_response, operation_name)\nbotocore.errorfactory.InvalidDocument: An error occurred (InvalidDocument) when calling the DescribeDocument operation: Document with name AWS-RestartEC2Instance does not exist.",
+    "duration_ms": 73.5,
+    "kind": "target_error",
+    "service": "ssm",
+    "site": {
+      "error_code": "InvalidDocument",
+      "error_operation": "DescribeDocument",
+      "error_status": 400,
+      "exception": "InvalidDocument",
+      "function": "run",
+      "source": "doc = ssm.describe_document(Name=_DOCUMENT)[\"Document\"]",
+      "statement": 2
+    },
+    "verdict": "error"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_aws_owned_restart_ec2_instance_automation_document_is_described_and_listed.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

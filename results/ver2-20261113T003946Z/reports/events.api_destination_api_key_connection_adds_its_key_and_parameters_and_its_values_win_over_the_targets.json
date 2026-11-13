@@ -1,0 +1,35 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "events.api-destination-api-key-connection-adds-its-key-and-parameters-and-its-values-win-over-the-targets",
+    "cleanup_detail": "teardown ran while the timed-out test was still running",
+    "cleanup_failed": false,
+    "cleanup_ms": 61.1,
+    "detail": "Check timed out after 60.0s",
+    "duration_ms": 60008.3,
+    "kind": "timeout",
+    "service": "events",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "Timeout",
+      "function": "_receive",
+      "source": "for msg in sqs.receive_message(QueueUrl=url, MaxNumberOfMessages=10, WaitTimeSeconds=5,",
+      "statement": 12
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_api_destination_api_key_connection_adds_its_key_and_parameters_and_its_values_win_over_the_targets.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

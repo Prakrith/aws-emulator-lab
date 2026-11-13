@@ -1,0 +1,23 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "iam.get-policy-returns-tags-list-policies-omits-them",
+    "detail": null,
+    "duration_ms": 82.1,
+    "kind": "passed",
+    "service": "iam",
+    "verdict": "passed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_get_policy_returns_tags_list_policies_omits_them.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

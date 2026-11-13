@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "kinesis.subscribe-to-shard-event-stream-framing-over-a-hand-signed-http2-request",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_subscribe_to_shard_event_stream_framing_over_a_hand_signed_http2_request.py\", line 142, in run\n    assert meta[\"error\"] is None, (\n           ^^^^^^^^^^^^^^^^^^^^^\nAssertionError: the HTTP/2 client failed talking to https://127.0.0.1:9401: session: 80FF7CF101000000:error:0A000460:SSL routines:ssl3_read_bytes:tlsv1 alert no application protocol:ssl/record/rec_layer_s3.c:910:SSL alert number 120\n. SubscribeToShard is only offered over HTTP/2, so a target that cannot serve h2 has no enhanced fan-out data plane",
+    "duration_ms": 6303.3,
+    "kind": "failed",
+    "service": "kinesis",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert meta[\"error\"] is None, (",
+      "statement": 14
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_subscribe_to_shard_event_stream_framing_over_a_hand_signed_http2_request.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

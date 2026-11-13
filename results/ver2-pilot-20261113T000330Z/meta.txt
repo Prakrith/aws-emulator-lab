@@ -1,0 +1,6 @@
+runner: fidelity-tests-runner fidelity-tests-runner 1.0.0
+suite commit: 4df2823bafface2ada35f482c07ff6668cc078e1
+emulator: Version: 1.0.338 Release date: 2026.11.12 Commit: 32b3cf39b49b34d906693dfa43539d42886b562b 
+uv: uv 0.13.7 (Homebrew 2026-11-03 aarch64-apple-darwin)
+command: python3 -I scripts/run_fidelity.py <suite-dir> results/ver2-pilot-20261113T000330Z <tests-file> 1
+selection: 4 tests per core label, evenly spaced in sorted order, excluding tests needing docker/cdk/kubectl/ffmpeg/git/npm/ssh-keygen

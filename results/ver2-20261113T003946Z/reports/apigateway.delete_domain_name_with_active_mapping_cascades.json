@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "apigateway.delete-domain-name-with-active-mapping-cascades",
+    "detail": "File \"context.py\", line 123, in wrapper\n    return func(*args, **kwargs)\n  File \"client.py\", line 1094, in _make_api_call\n    raise error_class(parsed_response, operation_name)\nbotocore.errorfactory.BadRequestException: An error occurred (BadRequestException) when calling the DeleteDomainName operation: The domain name sim2real-behav-dnmap-6128168261aa.example.com has base path mapping v1. Delete the base path mappings before deleting the domain name.",
+    "duration_ms": 150.4,
+    "kind": "target_error",
+    "service": "apigateway",
+    "site": {
+      "error_code": "BadRequestException",
+      "error_operation": "DeleteDomainName",
+      "error_status": 400,
+      "exception": "BadRequestException",
+      "function": "run",
+      "source": "apigw.delete_domain_name(domainName=domain_name)",
+      "statement": 12
+    },
+    "verdict": "error"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_delete_domain_name_with_active_mapping_cascades.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

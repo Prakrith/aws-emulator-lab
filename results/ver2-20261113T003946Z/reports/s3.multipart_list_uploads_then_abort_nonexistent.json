@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "s3.multipart-list-uploads-then-abort-nonexistent",
+    "detail": "File \"context.py\", line 123, in wrapper\n    return func(*args, **kwargs)\n  File \"client.py\", line 1094, in _make_api_call\n    raise error_class(parsed_response, operation_name)\nbotocore.errorfactory.NoSuchUpload: An error occurred (NoSuchUpload) when calling the AbortMultipartUpload operation: The specified upload does not exist. The upload ID may be invalid, or the upload may have been aborted or completed.",
+    "duration_ms": 121.0,
+    "kind": "target_error",
+    "service": "s3",
+    "site": {
+      "error_code": "NoSuchUpload",
+      "error_operation": "AbortMultipartUpload",
+      "error_status": 404,
+      "exception": "NoSuchUpload",
+      "function": "run",
+      "source": "s3.abort_multipart_upload(Bucket=bucket, Key=key, UploadId=upload_id)",
+      "statement": 18
+    },
+    "verdict": "error"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_multipart_list_uploads_then_abort_nonexistent.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

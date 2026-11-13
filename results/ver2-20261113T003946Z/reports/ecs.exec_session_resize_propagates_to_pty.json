@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "ecs.exec-session-resize-propagates-to-pty",
+    "detail": "File \"check_exec_session_resize_propagates_to_pty.py\", line 37, in run\n    _wait_for_exec_agent(ecs, cluster_arn, task_arn, timeout_s=_budget_s(ctx, 240), ctx=ctx)\n    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"check_exec_session_resize_propagates_to_pty.py\", line 423, in _wait_for_exec_agent\n    raise AssertionError(\n        f\"task stopped before it was execable: {last.get('stoppedReason')!r}\"\n    )\nAssertionError: task stopped before it was execable: 'Essential container in task exited'",
+    "duration_ms": 17440.7,
+    "kind": "failed",
+    "service": "ecs",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "_wait_for_exec_agent",
+      "source": "raise AssertionError(",
+      "statement": 7
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_exec_session_resize_propagates_to_pty.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 600.0,
+    "check_id": "ecs.service-cpu-utilization-metric-published",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_service_cpu_utilization_metric_published.py\", line 79, in run\n    raise AssertionError(\n    ...<2 lines>...\n    )\nAssertionError: AWS/ECS CPUUtilization metric did not land in CloudWatch within the poll budget (real ingestion latency can exceed this); not a hard failure",
+    "duration_ms": 367362.0,
+    "kind": "failed",
+    "service": "ecs",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "raise AssertionError(",
+      "statement": 15
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_service_cpu_utilization_metric_published.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

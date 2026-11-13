@@ -1,0 +1,23 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "dynamodb.scan-pages-at-1mb-with-and-without-never-matching-filter",
+    "detail": null,
+    "duration_ms": 3117.5,
+    "kind": "passed",
+    "service": "dynamodb",
+    "verdict": "passed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_scan_pages_at_1mb_with_and_without_never_matching_filter.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

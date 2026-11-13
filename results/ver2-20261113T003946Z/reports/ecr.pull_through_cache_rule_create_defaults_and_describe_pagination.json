@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "ecr.pull-through-cache-rule-create-defaults-and-describe-pagination",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_pull_through_cache_rule_create_defaults_and_describe_pagination.py\", line 32, in run\n    assert \"upstreamRegistry\" not in created, (\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: expected no upstreamRegistry key on Create when none was given, got {'ecrRepositoryPrefix': 'sim2real-behav-ptc-a-7f94e0d', 'upstreamRegistryUrl': 'registry.k8s.io', 'createdAt': datetime.datetime(2026, 11, 12, 20, 19, 39, 718424, tzinfo=tzlocal()), 'registryId': '000000000000', 'upstreamRegistry': 'k8s', 'upstreamRepositoryPrefix': 'ROOT', 'ResponseMetadata': {'HTTPStatusCode': 200, 'HTTPHeaders': {'content-type': 'application/x-amz-json-1.1', 'content-length': '214', 'date': 'Fri, 13 Nov 2026 01:19:39 GMT'}, 'RetryAttempts': 0}}",
+    "duration_ms": 77.8,
+    "kind": "failed",
+    "service": "ecr",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert \"upstreamRegistry\" not in created, (",
+      "statement": 7
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_pull_through_cache_rule_create_defaults_and_describe_pagination.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "ssm.put-inventory-then-delete-inventory-lifecycle",
+    "detail": "File \"check_put_inventory_then_delete_inventory_lifecycle.py\", line 25, in run\n    instance_id = _launch_managed_instance(ctx)\n  File \"check_put_inventory_then_delete_inventory_lifecycle.py\", line 264, in _launch_managed_instance\n    raise TimeoutError(f\"instance {instance_id} reaching PingStatus=Online: the run budget ended first; \"\n                       \"not graded\")\nTimeoutError: instance i-00000000000000001 reaching PingStatus=Online: the run budget ended first; not graded",
+    "duration_ms": 56676.0,
+    "kind": "target_error",
+    "service": "ssm",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "TimeoutError",
+      "function": "_launch_managed_instance",
+      "source": "raise TimeoutError(f\"instance {instance_id} reaching PingStatus=Online: the run budget ended first; \"",
+      "statement": 2
+    },
+    "verdict": "error"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_put_inventory_then_delete_inventory_lifecycle.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

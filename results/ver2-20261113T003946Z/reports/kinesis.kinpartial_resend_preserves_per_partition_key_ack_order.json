@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "kinesis.kinpartial-resend-preserves-per-partition-key-ack-order",
+    "detail": "File \"check_kinpartial_resend_preserves_per_partition_key_ack_order.py\", line 335, in run\n    marker, entries, resp = _provoke_partial_batch(\n                            ~~~~~~~~~~~~~~~~~~~~~~^\n        c, name, lambda attempt: _entries(f\"a{attempt}\", batch_size, record_size, keys)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"check_kinpartial_resend_preserves_per_partition_key_ack_order.py\", line 220, in _provoke_partial_batch\n    raise AssertionError(\n    ...<4 lines>...\n    )\nAssertionError: 60 back-to-back PutRecords calls (30000 records accepted-or-reported, 0 rejected whole) to a ONE-shard stream never produced a PARTIAL outcome: every call was either wholly accepted or wholly refused. A shard reports its write quota PER ENTRY, so overshooting it inside one call must split the batch",
+    "duration_ms": 2935.5,
+    "kind": "failed",
+    "service": "kinesis",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "_provoke_partial_batch",
+      "source": "raise AssertionError(",
+      "statement": 13
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_kinpartial_resend_preserves_per_partition_key_ack_order.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

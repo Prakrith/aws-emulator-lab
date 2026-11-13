@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "rds.deploy-rds-cluster-cfn-behavioral",
+    "detail": "File \"context.py\", line 123, in wrapper\n    return func(*args, **kwargs)\n  File \"waiter.py\", line 378, in wait\n    raise WaiterError(\n    ...<3 lines>...\n    )\nbotocore.exceptions.WaiterError: Waiter StackCreateComplete failed: Waiter encountered a terminal failure state: Matched expected service error code: ValidationError",
+    "duration_ms": 2232.3,
+    "kind": "target_error",
+    "service": "rds",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "WaiterError",
+      "function": "_deploy_cfn",
+      "source": "cfn.get_waiter(\"stack_create_complete\").wait(",
+      "statement": 6
+    },
+    "verdict": "error"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_deploy_rds_cluster_cfn_behavioral.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

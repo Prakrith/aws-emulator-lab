@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "lambda.python-ctypes-loads-libc",
+    "detail": "File \"check_python_ctypes_loads_libc.py\", line 42, in run\n    out = _invoke_ok(ctx, fn[\"name\"], {\"text\": \"hello\"})\n  File \"check_python_ctypes_loads_libc.py\", line 141, in _invoke_ok\n    assert err is None, f\"the function failed: {err!r} {out!r}\"\n           ^^^^^^^^^^^\nAssertionError: the function failed: 'Unhandled' {'errorMessage': \"Unable to import module 'index': No module named '_ctypes'\", 'errorType': 'Runtime.ImportModuleError', 'requestId': '', 'stackTrace': []}",
+    "duration_ms": 1221.0,
+    "kind": "failed",
+    "service": "lambda",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "_invoke_ok",
+      "source": "assert err is None, f\"the function failed: {err!r} {out!r}\"",
+      "statement": 3
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_python_ctypes_loads_libc.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

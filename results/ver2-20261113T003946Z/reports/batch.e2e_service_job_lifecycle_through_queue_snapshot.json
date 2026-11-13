@@ -1,0 +1,35 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "batch.e2e-service-job-lifecycle-through-queue-snapshot",
+    "cleanup_detail": "cleanup failed: RuntimeError('1 teardown(s) failed: ClientException(\"An error occurred (ClientException) when calling the DeleteSchedulingPolicy operation: Cannot delete a scheduling policy that\\'s used in any job queues.\")'); teardown ran while the timed-out test was still running",
+    "cleanup_failed": true,
+    "cleanup_ms": 5064.8,
+    "detail": "Check timed out after 60.0s",
+    "duration_ms": 60004.6,
+    "kind": "timeout",
+    "service": "batch",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "Timeout",
+      "function": "_poll_until",
+      "source": "time.sleep(interval_s)",
+      "statement": 11
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_e2e_service_job_lifecycle_through_queue_snapshot.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

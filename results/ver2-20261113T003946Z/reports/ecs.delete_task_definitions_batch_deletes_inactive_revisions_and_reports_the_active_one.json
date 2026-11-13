@@ -1,0 +1,23 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "ecs.delete-task-definitions-batch-deletes-inactive-revisions-and-reports-the-active-one",
+    "detail": null,
+    "duration_ms": 91.3,
+    "kind": "passed",
+    "service": "ecs",
+    "verdict": "passed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_delete_task_definitions_batch_deletes_inactive_revisions_and_reports_the_active_one.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

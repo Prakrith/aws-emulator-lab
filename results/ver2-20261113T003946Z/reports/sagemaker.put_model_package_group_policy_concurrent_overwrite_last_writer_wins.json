@@ -1,0 +1,23 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "sagemaker.put-model-package-group-policy-concurrent-overwrite-last-writer-wins",
+    "detail": null,
+    "duration_ms": 156.8,
+    "kind": "passed",
+    "service": "sagemaker",
+    "verdict": "passed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_put_model_package_group_policy_concurrent_overwrite_last_writer_wins.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

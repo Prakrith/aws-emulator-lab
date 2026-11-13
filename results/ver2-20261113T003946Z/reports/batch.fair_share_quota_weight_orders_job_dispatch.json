@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "batch.fair-share-quota-weight-orders-job-dispatch",
+    "detail": "File \"check_fair_share_quota_weight_orders_job_dispatch.py\", line 46, in run\n    _poll_job_status(batch, runner[\"jobId\"], {\"RUNNING\"}, {\"FAILED\", \"SUCCEEDED\"}, timeout_s=240.0)\n    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"check_fair_share_quota_weight_orders_job_dispatch.py\", line 328, in _poll_job_status\n    raise AssertionError(\n    ...<2 lines>...\n    )\nAssertionError: job 37016347-5f4d-4fcb-8da5-2f7fc92adb8e reached unexpected status FAILED: This emulator does not run containers, so the job's container was never started",
+    "duration_ms": 9319.6,
+    "kind": "failed",
+    "service": "batch",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "_poll_job_status",
+      "source": "raise AssertionError(",
+      "statement": 13
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_fair_share_quota_weight_orders_job_dispatch.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

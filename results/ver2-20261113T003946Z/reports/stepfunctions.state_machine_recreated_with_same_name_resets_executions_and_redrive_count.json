@@ -1,0 +1,23 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "stepfunctions.state-machine-recreated-with-same-name-resets-executions-and-redrive-count",
+    "detail": null,
+    "duration_ms": 6227.0,
+    "kind": "passed",
+    "service": "stepfunctions",
+    "verdict": "passed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_state_machine_recreated_with_same_name_resets_executions_and_redrive_count.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

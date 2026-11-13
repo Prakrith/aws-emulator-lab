@@ -1,0 +1,26 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "athena.workgroup-concurrent-update-configuration-serializes",
+    "cleanup_detail": "cleanup failed: RuntimeError(\"1 teardown(s) failed: ClientError('An error occurred (NotImplemented) when calling the DeleteWorkGroup operation: operation DeleteWorkGroup is scaffolded but not implemented in this emulator')\")",
+    "cleanup_failed": true,
+    "cleanup_ms": 3.1,
+    "detail": null,
+    "duration_ms": 144.6,
+    "kind": "passed",
+    "service": "athena",
+    "verdict": "passed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_workgroup_concurrent_update_configuration_serializes.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

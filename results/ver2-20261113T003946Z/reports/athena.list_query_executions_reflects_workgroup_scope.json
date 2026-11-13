@@ -1,0 +1,35 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "athena.list-query-executions-reflects-workgroup-scope",
+    "cleanup_detail": "cleanup failed: RuntimeError(\"2 teardown(s) failed: ClientError('An error occurred (NotImplemented) when calling the DeleteWorkGroup operation: operation DeleteWorkGroup is scaffolded but not implemented in this emulator'); ClientError('An error occurred (NotImplemented) when calling the DeleteWorkGroup operation: operation DeleteWorkGroup is scaffolded but not implemented in this emulator')\")",
+    "cleanup_failed": true,
+    "cleanup_ms": 23.1,
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_list_query_executions_reflects_workgroup_scope.py\", line 35, in run\n    ids_in_b = athena.list_query_executions(WorkGroup=wg_b)[\"QueryExecutionIds\"]\n               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^\nKeyError: 'QueryExecutionIds'",
+    "duration_ms": 3197.3,
+    "kind": "target_error",
+    "service": "athena",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "KeyError",
+      "function": "run",
+      "source": "ids_in_b = athena.list_query_executions(WorkGroup=wg_b)[\"QueryExecutionIds\"]",
+      "statement": 13
+    },
+    "verdict": "error"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_list_query_executions_reflects_workgroup_scope.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

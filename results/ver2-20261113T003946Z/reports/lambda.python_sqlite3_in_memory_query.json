@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "lambda.python-sqlite3-in-memory-query",
+    "detail": "File \"check_python_sqlite3_in_memory_query.py\", line 48, in run\n    out = _invoke_ok(ctx, fn[\"name\"], {\"names\": names})\n  File \"check_python_sqlite3_in_memory_query.py\", line 149, in _invoke_ok\n    assert err is None, f\"the function failed: {err!r} {out!r}\"\n           ^^^^^^^^^^^\nAssertionError: the function failed: 'Unhandled' {'errorMessage': \"Unable to import module 'index': No module named '_sqlite3'\", 'errorType': 'Runtime.ImportModuleError', 'requestId': '', 'stackTrace': []}",
+    "duration_ms": 1197.7,
+    "kind": "failed",
+    "service": "lambda",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "_invoke_ok",
+      "source": "assert err is None, f\"the function failed: {err!r} {out!r}\"",
+      "statement": 4
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_python_sqlite3_in_memory_query.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

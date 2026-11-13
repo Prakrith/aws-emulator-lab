@@ -1,0 +1,23 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "glue.catalog-parameters-map-round-trip",
+    "detail": null,
+    "duration_ms": 87.4,
+    "kind": "passed",
+    "service": "glue",
+    "verdict": "passed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_catalog_parameters_map_round_trip.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

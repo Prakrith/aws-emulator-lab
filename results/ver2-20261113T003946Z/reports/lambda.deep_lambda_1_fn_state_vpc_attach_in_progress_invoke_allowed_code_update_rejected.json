@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "lambda.deep-lambda-1-fn-state-vpc-attach-in-progress-invoke-allowed-code-update-rejected",
+    "detail": "File \"check_deep_lambda_1_fn_state_vpc_attach_in_progress_invoke_allowed_code_update_rejected.py\", line 43, in run\n    _scenario(ctx, lam, fn, role_arn, vpc_id, subnet_ids, sg_id)\n    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"check_deep_lambda_1_fn_state_vpc_attach_in_progress_invoke_allowed_code_update_rejected.py\", line 86, in _scenario\n    assert settled[\"VpcConfig\"][\"VpcId\"] == vpc_id, (\n           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^\nKeyError: 'VpcId'",
+    "duration_ms": 6472.3,
+    "kind": "target_error",
+    "service": "lambda",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "KeyError",
+      "function": "_scenario",
+      "source": "assert settled[\"VpcConfig\"][\"VpcId\"] == vpc_id, (",
+      "statement": 8
+    },
+    "verdict": "error"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_deep_lambda_1_fn_state_vpc_attach_in_progress_invoke_allowed_code_update_rejected.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

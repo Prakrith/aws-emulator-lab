@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "ssm.ops-metadata-delete-nonexistent-rejected",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_ops_metadata_delete_nonexistent_rejected.py\", line 36, in run\n    assert pre_code == \"OpsMetadataNotFoundException\", f\"got {pre_code!r}\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: got 'NotImplemented'",
+    "duration_ms": 153.9,
+    "kind": "failed",
+    "service": "ssm",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert pre_code == \"OpsMetadataNotFoundException\", f\"got {pre_code!r}\"",
+      "statement": 6
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_ops_metadata_delete_nonexistent_rejected.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

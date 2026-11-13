@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "cloudformation.template-body-unicode-round-trip",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_template_body_unicode_round_trip.py\", line 56, in run\n    assert parsed[\"Description\"] == expected_description, (\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Description did not match real AWS's ASCII-coercion contract: \"\\u90e8\\u7f72\\u30c6\\u30f3\\u30d7\\u30ec\\u30fc\\u30c8 \\ud83d\\ude80 \\u2014 caf\\u00e9 na\\u00efve, Z\\u00fcrich, \\u041c\\u043e\\u0441\\u043a\\u0432\\u0430\" != \"???????? ? ? caf? na?ve, Z?rich, ??????\"",
+    "duration_ms": 3103.8,
+    "kind": "failed",
+    "service": "cloudformation",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert parsed[\"Description\"] == expected_description, (",
+      "statement": 15
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_template_body_unicode_round_trip.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

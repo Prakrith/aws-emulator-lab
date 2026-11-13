@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "athena.schemaevo-add-column-reads-null-from-older-parquet-files",
+    "detail": "File \"check_schemaevo_add_column_reads_null_from_older_parquet_files.py\", line 115, in _stage_parquet\n    _run_sql(athena, out,\n    ~~~~~~~~^^^^^^^^^^^^^\n             f\"UNLOAD ({select_sql}) TO 's3://{bucket}/{stage_prefix}' \"\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n             \"WITH (format = 'PARQUET')\", database=database)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"check_schemaevo_add_column_reads_null_from_older_parquet_files.py\", line 66, in _run_sql\n    raise AssertionError(\n        f\"statement reached {state}, expected SUCCEEDED: {sql!r} -- \"\n        f\"{status.get('StateChangeReason')}\")\nAssertionError: statement reached FAILED, expected SUCCEEDED: 'UNLOAD (SELECT id, name FROM \"sim2real_behav_db_538e0b8dc453\".\"sim2real_behav_src_647363f37b47\" ORDER BY id) TO \\'s3://sim2real-behav-athena-data-ab48352b99a0/stage-v1/\\' WITH (format = \\'PARQUET\\')' -- near \"UNLOAD\": syntax error in UNLOAD(SELECT id, name FROM \"sim2real_behav_db_538e0b8dc453.sim2real_behav_src_647363f37b47\" ORDER BY id) TO 's3://sim2real-behav-athena-data-ab48352b99a0/stage-v1/' WITH (format = 'PARQUET') at offset 0",
+    "duration_ms": 12248.7,
+    "kind": "failed",
+    "service": "athena",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "_run_sql",
+      "source": "raise AssertionError(",
+      "statement": 15
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_schemaevo_add_column_reads_null_from_older_parquet_files.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

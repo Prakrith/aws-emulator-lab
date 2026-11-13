@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "batch.service-job-lifecycle-transitions",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_service_job_lifecycle_transitions.py\", line 38, in run\n    assert final[\"status\"] == \"SUCCEEDED\", f\"job ended with status {final['status']}: {final.get('statusReason')}\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: job ended with status FAILED: This emulator does not run SageMaker AI, so the service job was never dispatched",
+    "duration_ms": 8276.1,
+    "kind": "failed",
+    "service": "batch",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert final[\"status\"] == \"SUCCEEDED\", f\"job ended with status {final['status']}: {final.get('statusReason')}\"",
+      "statement": 10
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_service_job_lifecycle_transitions.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

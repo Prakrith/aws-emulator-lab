@@ -13,7 +13,7 @@ The owner uses the emulator on a laptop to learn how AWS services, resources and
 ## Requirements
 
 - **R-1.** The emulator build is pinned and rebuildable, with telemetry off and the port bound to `127.0.0.1`.
-- **R-2.** Every service that AWS's fidelity suite covers has a recorded per-service score from a run on the pinned build.
+- **R-2.** Each core service has a recorded sampled happy-path score from AWS's fidelity suite, run on the pinned build. The score says nothing about error handling or edge cases. VPC is covered by the suite's `ec2` label, so the 25 services map to 24 labels.
 - **R-3.** Each service has a count of implemented and unimplemented operations taken from the emulator's source at the pinned commit.
 - **R-4.** A core set of about 25 services passes a create, describe, list and delete smoke test, or has its failures recorded.
 - **R-5.** The results are reviewed independently of the agent that produced them.
@@ -27,7 +27,7 @@ Status is `open`, `satisfied`, `not satisfied`, `not applicable: <reason>`, or `
 | ID | Type | Traces to | Method | Evidence | Status |
 |---|---|---|---|---|---|
 | VER-1 | Verification | R-1 | Rebuild the image from the recorded Dockerfile in a clean Docker context. Compare `aws-emulator -v` with the pinned version. Confirm the startup line reports telemetry disabled and that `docker port` shows only `127.0.0.1`. | `Dockerfile`, `bin/`, task aws-emulator-lab-de5 notes | `satisfied` |
-| VER-2 | Verification | R-2 | Run AWS's `fidelity-tests-runner` against the pinned build and summarize scores by service. Record the runner version and every service it does not cover. | | `open` |
+| VER-2 | Verification | R-2 | Run AWS's `fidelity-tests-runner` against the pinned build on up to 40 happy-path tests per core label, each on a fresh emulator, and summarize scores by service. Record the runner version, the selection command, the tests excluded for missing tools, and the sample size per service. | `results/ver2-20261113T003946Z/`, `scripts/select_tests.py`, task aws-emulator-lab-jfs notes | `satisfied` |
 | VER-3 | Verification | R-3 | For each service crate at the pinned commit, count operations in the Smithy model and those marked `SCAFFOLDED, NOT IMPLEMENTED:` in the source. Record the command and the counts. | `scripts/count_ops.py`, `results/ver3-*`, task aws-emulator-lab-d1w notes | `satisfied` |
 | VER-4 | Verification | R-4 | Run the smoke-test harness for each core service on a fresh emulator. Record each operation as works, 501, or error. | | `open` |
 | VER-5 | Verification | R-5 | A reviewer that is not Claude Code reads the project record, results and harness read-only and reports findings. Record the findings and what was done about each. | | `open` |
@@ -57,7 +57,7 @@ Status is `open`, `closed`, `deferred: <reason>`, or `accepted` as a limitation.
 | U-1 | A gap titled "Lambda Invoke refuses every real invocation with NotImplemented" is filed. Current status is unknown. | `open` |
 | U-2 | Batch jobs fail with "This emulator does not run containers". Observed 2026-11-12 on v1.0.336, not yet rechecked on the pinned v1.0.338. | `accepted` |
 | U-3 | The emulator does not evaluate IAM, bucket or key policies, so results say nothing about authorization. | `accepted` |
-| U-4 | It is unknown whether `fidelity-tests-runner` installs and runs on this machine without extra tooling. | `open` |
+| U-4 | `fidelity-tests-runner` needs `uv`, which was installed with Homebrew. 175 tests need `cdk`, `kubectl` or `ffmpeg`, which are absent. | `closed` |
 | U-5 | Outbound network connections made by the emulator were not checked. | `open` |
 | U-6 | State clearing on restart was not tested. | `open` |
 

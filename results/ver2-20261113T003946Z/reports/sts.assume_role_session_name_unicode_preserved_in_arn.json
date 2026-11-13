@@ -1,0 +1,23 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "sts.assume-role-session-name-unicode-preserved-in-arn",
+    "detail": null,
+    "duration_ms": 96.7,
+    "kind": "passed",
+    "service": "sts",
+    "verdict": "passed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_assume_role_session_name_unicode_preserved_in_arn.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

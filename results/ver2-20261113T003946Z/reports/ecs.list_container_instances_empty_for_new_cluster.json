@@ -1,0 +1,23 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "ecs.list-container-instances-empty-for-new-cluster",
+    "detail": null,
+    "duration_ms": 135.0,
+    "kind": "passed",
+    "service": "ecs",
+    "verdict": "passed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_list_container_instances_empty_for_new_cluster.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "ssm.put-compliance-items-then-list-roundtrip",
+    "detail": "File \"check_put_compliance_items_then_list_roundtrip.py\", line 26, in run\n    resource_id = _provision_connected_targets(ctx, count=1)[0]\n                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^\n  File \"check_put_compliance_items_then_list_roundtrip.py\", line 207, in _provision_connected_targets\n    raise TimeoutError(f\"instances {pending} reaching PingStatus=Online: the run budget ended first; \"\n                       \"not graded\")\nTimeoutError: instances {'i-00000000000000001'} reaching PingStatus=Online: the run budget ended first; not graded",
+    "duration_ms": 55588.7,
+    "kind": "target_error",
+    "service": "ssm",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "TimeoutError",
+      "function": "_provision_connected_targets",
+      "source": "raise TimeoutError(f\"instances {pending} reaching PingStatus=Online: the run budget ended first; \"",
+      "statement": 2
+    },
+    "verdict": "error"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_put_compliance_items_then_list_roundtrip.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

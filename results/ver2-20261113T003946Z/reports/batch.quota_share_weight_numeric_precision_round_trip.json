@@ -1,0 +1,23 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "batch.quota-share-weight-numeric-precision-round-trip",
+    "detail": null,
+    "duration_ms": 65.8,
+    "kind": "passed",
+    "service": "batch",
+    "verdict": "passed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_quota_share_weight_numeric_precision_round_trip.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

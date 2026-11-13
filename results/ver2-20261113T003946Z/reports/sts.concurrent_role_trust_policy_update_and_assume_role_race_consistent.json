@@ -1,0 +1,23 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "sts.concurrent-role-trust-policy-update-and-assume-role-race-consistent",
+    "detail": null,
+    "duration_ms": 175.5,
+    "kind": "passed",
+    "service": "sts",
+    "verdict": "passed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_concurrent_role_trust_policy_update_and_assume_role_race_consistent.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

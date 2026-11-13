@@ -1,0 +1,23 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "sns.publish-by-target-arn-naming-a-topic-delivers-like-topic-arn",
+    "detail": null,
+    "duration_ms": 111.7,
+    "kind": "passed",
+    "service": "sns",
+    "verdict": "passed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_publish_by_target_arn_naming_a_topic_delivers_like_topic_arn.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

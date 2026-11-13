@@ -1,0 +1,23 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "ec2.op-contract-get-transit-gateway-route-table-associations",
+    "detail": null,
+    "duration_ms": 5161.5,
+    "kind": "passed",
+    "service": "ec2",
+    "verdict": "passed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9401",
+  "file": "check_op_contract_get_transit_gateway_route_table_associations.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

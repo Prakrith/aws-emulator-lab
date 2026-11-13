@@ -1,0 +1,23 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "stepfunctions.conc-distributed-map-item-reader-missing-object-fails-before-any-child",
+    "detail": null,
+    "duration_ms": 7389.9,
+    "kind": "passed",
+    "service": "stepfunctions",
+    "verdict": "passed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_conc_distributed_map_item_reader_missing_object_fails_before_any_child.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

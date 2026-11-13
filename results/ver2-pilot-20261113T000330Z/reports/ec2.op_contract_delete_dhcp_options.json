@@ -1,0 +1,35 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "ec2.op-contract-delete-dhcp-options",
+    "cleanup_detail": "cleanup failed: RuntimeError('1 teardown(s) failed: ClientError(\"An error occurred (InvalidDhcpOptionID.NotFound) when calling the DeleteDhcpOptions operation: The dhcpOption ID \\'dopt-00000000000000080\\' does not exist\")')",
+    "cleanup_failed": true,
+    "cleanup_ms": 4.3,
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_op_contract_delete_dhcp_options.py\", line 53, in run\n    assert code == _DELETE_MALFORMED, code\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: InvalidDhcpOptionID.NotFound",
+    "duration_ms": 126.2,
+    "kind": "failed",
+    "service": "ec2",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert code == _DELETE_MALFORMED, code",
+      "statement": 12
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_op_contract_delete_dhcp_options.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

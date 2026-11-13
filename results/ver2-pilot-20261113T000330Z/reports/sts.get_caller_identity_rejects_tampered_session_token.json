@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "sts.get-caller-identity-rejects-tampered-session-token",
+    "detail": "File \"run.py\", line 390, in <lambda>\n    finished, exc, frame = _on_daemon_thread(lambda: fn(ctx), f\"check:{name}\", timeout_s)\n                                                     ~~^^^^^\n  File \"check_get_caller_identity_rejects_tampered_session_token.py\", line 64, in run\n    assert code == \"InvalidClientTokenId\", (\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: expected InvalidClientTokenId for a tampered session token, got 'SignatureDoesNotMatch'",
+    "duration_ms": 71.3,
+    "kind": "failed",
+    "service": "sts",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "run",
+      "source": "assert code == \"InvalidClientTokenId\", (",
+      "statement": 14
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": false,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_get_caller_identity_rejects_tampered_session_token.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

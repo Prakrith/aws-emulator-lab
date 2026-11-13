@@ -1,0 +1,36 @@
+{
+  "check": {
+    "budget_s": 180.0,
+    "check_id": "glue.e2e-glossary-term-association-workflow",
+    "cleanup_detail": "teardown ran while the timed-out test was still running",
+    "cleanup_failed": false,
+    "cleanup_ms": 27.8,
+    "detail": "Check timed out after 180.0s",
+    "duration_ms": 180034.9,
+    "kind": "timeout",
+    "retried_after_timeout": true,
+    "service": "glue",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "Timeout",
+      "function": "_poll_associate",
+      "source": "_time.sleep(interval_s)",
+      "statement": 17
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": true,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_e2e_glossary_term_association_workflow.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

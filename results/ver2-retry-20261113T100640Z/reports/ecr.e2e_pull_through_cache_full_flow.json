@@ -1,0 +1,33 @@
+{
+  "check": {
+    "budget_s": 180.0,
+    "check_id": "ecr.e2e-pull-through-cache-full-flow",
+    "detail": "File \"check_e2e_pull_through_cache_full_flow.py\", line 31, in run\n    pulled = _pull_with_retry(ecr, cached_repo_name, \"latest\")\n  File \"check_e2e_pull_through_cache_full_flow.py\", line 97, in _pull_with_retry\n    raise AssertionError(f\"pull-through-cache image never became available: {last!r}\")\nAssertionError: pull-through-cache image never became available: RepositoryNotFoundException(\"An error occurred (RepositoryNotFoundException) when calling the BatchGetImage operation: The repository with name 'sim2realptc-56c5fb179e84/docker/library/hello-world' does not exist in the registry with id '000000000000'\")",
+    "duration_ms": 90295.6,
+    "kind": "failed",
+    "retried_after_timeout": true,
+    "service": "ecr",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "_pull_with_retry",
+      "source": "raise AssertionError(f\"pull-through-cache image never became available: {last!r}\")",
+      "statement": 9
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": true,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_e2e_pull_through_cache_full_flow.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

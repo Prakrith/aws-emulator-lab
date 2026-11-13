@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "events.api-destination-api-key-connection-adds-its-key-and-parameters-and-its-values-win-over-the-targets",
+    "detail": "File \"context.py\", line 123, in wrapper\n    return func(*args, **kwargs)\n  File \"client.py\", line 1094, in _make_api_call\n    raise error_class(parsed_response, operation_name)\nbotocore.exceptions.ClientError: An error occurred (RequestTimeTooSkewed) when calling the CreateQueue operation: The difference between the request time and the current time is too large",
+    "duration_ms": 122.1,
+    "kind": "target_error",
+    "service": "events",
+    "site": {
+      "error_code": "RequestTimeTooSkewed",
+      "error_operation": "CreateQueue",
+      "error_status": 403,
+      "exception": "ClientError",
+      "function": "_create_queue",
+      "source": "url = sqs.create_queue(QueueName=ctx.unique_name(prefix), tags={\"sim2real\": CHECK})[\"QueueUrl\"]",
+      "statement": 3
+    },
+    "verdict": "error"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": true,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_api_destination_api_key_connection_adds_its_key_and_parameters_and_its_values_win_over_the_targets.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

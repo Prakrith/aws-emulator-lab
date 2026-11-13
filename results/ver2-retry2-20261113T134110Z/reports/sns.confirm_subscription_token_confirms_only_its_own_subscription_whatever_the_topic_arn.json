@@ -1,0 +1,36 @@
+{
+  "check": {
+    "budget_s": 180.0,
+    "check_id": "sns.confirm-subscription-token-confirms-only-its-own-subscription-whatever-the-topic-arn",
+    "cleanup_detail": "teardown ran while the timed-out test was still running",
+    "cleanup_failed": false,
+    "cleanup_ms": 46.2,
+    "detail": "Check timed out after 180.0s",
+    "duration_ms": 180006.0,
+    "kind": "timeout",
+    "retried_after_timeout": true,
+    "service": "sns",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "Timeout",
+      "function": "_captured",
+      "source": "resp = sqs.receive_message(QueueUrl=capture_url, MaxNumberOfMessages=10, WaitTimeSeconds=2)",
+      "statement": 6
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": true,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_confirm_subscription_token_confirms_only_its_own_subscription_whatever_the_topic_arn.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

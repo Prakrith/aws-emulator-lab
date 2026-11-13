@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """Run fidelity tests, each against its own fresh emulator container.
 
-usage: python3 -I scripts/run_fidelity.py <suite-dir> <new-output-dir> <tests-file> [workers]
+usage: python3 -I scripts/run_fidelity.py <suite-dir> <new-output-dir> <tests-file> [workers] [runner options...]
+
+Runner options, such as --retry-timeout, are passed to `fidelity-tests-runner run`.
 
 <tests-file> lists one manifest `path` per line. For each test this starts the pinned image
 (telemetry off, host port on 127.0.0.1 only, 2 GB), copies out the emulator's CA and credentials,
@@ -19,7 +21,7 @@ def sh(*a, **k):
     return subprocess.run(a, capture_output=True, text=True, **k)
 
 
-def run_one(suite, out, path, worker):
+def run_one(suite, out, path, worker, extra=()):
     check = os.path.basename(os.path.dirname(path)) + "." + os.path.basename(path)[len("check_"):-3]
     name, port = f"fidelity-{worker}", BASE_PORT + worker
     t0, rc, note = time.time(), None, ""
@@ -47,7 +49,7 @@ def run_one(suite, out, path, worker):
                    "--endpoint", f"https://127.0.0.1:{port}",
                    "--credentials-file", f"{td}/emulator_credentials",
                    "--ca-bundle", f"{td}/ca.pem",
-                   "--report", f"{out}/reports/{check}.json", cwd=suite, timeout=1500)
+                   "--report", f"{out}/reports/{check}.json", *extra, cwd=suite, timeout=1500)
             rc = p.returncode
             if rc not in (0, 11):
                 note = (p.stderr or p.stdout).strip().splitlines()[-1:] and (p.stderr or p.stdout).strip().splitlines()[-1][:200]
@@ -58,7 +60,7 @@ def run_one(suite, out, path, worker):
     return {"check_id": check, "path": path, "exit_code": rc, "seconds": round(time.time() - t0, 1), "note": note}
 
 
-def main(suite, out, tests_file, workers="1"):
+def main(suite, out, tests_file, workers="1", *extra):
     suite, out = os.path.abspath(suite), os.path.abspath(out)
     os.makedirs(f"{out}/reports")
     tests = [l.strip() for l in open(tests_file) if l.strip()]
@@ -72,7 +74,7 @@ def main(suite, out, tests_file, workers="1"):
             with lock:
                 wk = free.pop()
             try:
-                row = run_one(suite, out, path, wk)
+                row = run_one(suite, out, path, wk, extra)
             finally:
                 with lock:
                     free.append(wk)

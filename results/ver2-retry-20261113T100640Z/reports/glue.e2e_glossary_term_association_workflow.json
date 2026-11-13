@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "glue.e2e-glossary-term-association-workflow",
+    "detail": "File \"context.py\", line 123, in wrapper\n    return func(*args, **kwargs)\n  File \"client.py\", line 1094, in _make_api_call\n    raise error_class(parsed_response, operation_name)\nbotocore.exceptions.ClientError: An error occurred (RequestTimeTooSkewed) when calling the CreateGlossary operation: The difference between the request time and the current time is too large",
+    "duration_ms": 109.7,
+    "kind": "target_error",
+    "service": "glue",
+    "site": {
+      "error_code": "RequestTimeTooSkewed",
+      "error_operation": "CreateGlossary",
+      "error_status": 403,
+      "exception": "ClientError",
+      "function": "run",
+      "source": "glossary = glue.create_glossary(Name=glossary_name)",
+      "statement": 4
+    },
+    "verdict": "error"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": true,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_e2e_glossary_term_association_workflow.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

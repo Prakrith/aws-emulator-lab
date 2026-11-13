@@ -1,0 +1,4 @@
+This retry is only partly valid. The laptop slept during it (gap of 112 min after 10:44Z, more sleeps at
+12:36Z, 12:44Z and 13:01Z), which makes the VM clock lag (RequestTimeTooSkewed) and ages wall-clock timeouts.
+Valid: the 10 tests that finished before 10:44Z (reports with mtime <= 10:44:18Z) and the last two (ssm.session_start_describe_terminate_lifecycle, sts.a_chained_session_outlasts_the_parent_role_and_expires_l).
+Not valid: the 15 in between. They were rerun in results/ver2-retry2-*. summary.txt here covers all 27 and must not be quoted.

@@ -1,0 +1,5 @@
+retry of the 27 tests that timed out in results/ver2-20261113T003946Z
+run: python3 -I scripts/run_fidelity.py <suite-dir> results/ver2-retry-20261113T100640Z tests.txt 1 --retry-timeout
+runner 1.0.0, suite 4df2823bafface2ada35f482c07ff6668cc078e1, emulator 1.0.338 (32b3cf3), 1 worker; from about 10:20Z the ffc smoke run (one sequential CLI client) ran at the same time
+started: 2026-11-13T10:06:44Z
+finished: 2026-11-13T13:39:58Z

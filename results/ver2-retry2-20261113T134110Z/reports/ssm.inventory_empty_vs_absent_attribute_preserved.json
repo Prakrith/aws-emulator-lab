@@ -1,0 +1,36 @@
+{
+  "check": {
+    "budget_s": 180.0,
+    "check_id": "ssm.inventory-empty-vs-absent-attribute-preserved",
+    "cleanup_detail": "teardown ran while the timed-out test was still running",
+    "cleanup_failed": false,
+    "cleanup_ms": 2091.5,
+    "detail": "Check timed out after 180.0s",
+    "duration_ms": 180007.5,
+    "kind": "timeout",
+    "retried_after_timeout": true,
+    "service": "ssm",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "Timeout",
+      "function": "_poll_until",
+      "source": "time.sleep(interval_s)",
+      "statement": 2
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": true,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_inventory_empty_vs_absent_attribute_preserved.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

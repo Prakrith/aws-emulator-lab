@@ -1,0 +1,33 @@
+{
+  "check": {
+    "budget_s": 180.0,
+    "check_id": "ecs.submit-container-state-change-updates-container-status",
+    "detail": "File \"check_submit_container_state_change_updates_container_status.py\", line 29, in run\n    doc, sig = _launch_identity_source_instance(ctx)\n               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^\n  File \"check_submit_container_state_change_updates_container_status.py\", line 283, in _launch_identity_source_instance\n    raise AssertionError(f\"identity-fetch EC2 instance never registered Online with SSM (status={online!r})\")\nAssertionError: identity-fetch EC2 instance never registered Online with SSM (status=None)",
+    "duration_ms": 125428.6,
+    "kind": "failed",
+    "retried_after_timeout": true,
+    "service": "ecs",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "AssertionError",
+      "function": "_launch_identity_source_instance",
+      "source": "raise AssertionError(f\"identity-fetch EC2 instance never registered Online with SSM (status={online!r})\")",
+      "statement": 3
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": true,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_submit_container_state_change_updates_container_status.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

@@ -1,0 +1,10 @@
+n=15 passed=2 pass_rate=0.1333 coverage=1.0000 (15/15 scored) cleanup_failed=1
+failed: failed=1 timeout=12
+excluded: -
+  ecs: 0/3 (0.0000)
+  events: 0/1 (0.0000)
+  glue: 0/1 (0.0000)
+  rds: 2/4 (0.5000)
+  secretsmanager: 0/1 (0.0000)
+  sns: 0/3 (0.0000)
+  ssm: 0/2 (0.0000)

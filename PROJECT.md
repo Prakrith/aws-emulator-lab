@@ -29,7 +29,7 @@ Status is `open`, `satisfied`, `not satisfied`, `not applicable: <reason>`, or `
 | VER-1 | Verification | R-1 | Rebuild the image from the recorded Dockerfile in a clean Docker context. Compare `aws-emulator -v` with the pinned version. Confirm the startup line reports telemetry disabled and that `docker port` shows only `127.0.0.1`. | `Dockerfile`, `bin/`, task aws-emulator-lab-de5 notes | `satisfied` |
 | VER-2 | Verification | R-2 | Run AWS's `fidelity-tests-runner` against the pinned build on up to 40 happy-path tests per core label, each on a fresh emulator, and summarize scores by service. Record the runner version, the selection command, the tests excluded for missing tools, and the sample size per service. | `results/ver2-20261113T003946Z/`, `scripts/select_tests.py`, task aws-emulator-lab-jfs notes | `satisfied` |
 | VER-3 | Verification | R-3 | For each service crate at the pinned commit, count operations in the Smithy model and those marked `SCAFFOLDED, NOT IMPLEMENTED:` in the source. Record the command and the counts. | `scripts/count_ops.py`, `results/ver3-*`, task aws-emulator-lab-d1w notes | `satisfied` |
-| VER-4 | Verification | R-4 | Run the smoke-test harness for each core service on a fresh emulator. Record each operation as works, 501, or error. | | `open` |
+| VER-4 | Verification | R-4 | Run the smoke-test harness for each core service on a fresh emulator. Record each operation as works, 501, or error. | `scripts/smoke.py`, `results/ver4-20261113T102029Z/`, task aws-emulator-lab-ffc notes | `satisfied` |
 | VER-5 | Verification | R-5 | A reviewer that is not Claude Code reads the project record, results and harness read-only and reports findings. Record the findings and what was done about each. | | `open` |
 | VAL-1 | Validation | Intended use | The owner reads the results table and ranked list and judges whether they say which services to learn on the emulator. | | `open` |
 
@@ -54,12 +54,12 @@ Status is `open`, `closed`, `deferred: <reason>`, or `accepted` as a limitation.
 
 | ID | Item | Status |
 |---|---|---|
-| U-1 | A gap titled "Lambda Invoke refuses every real invocation with NotImplemented" is filed. Current status is unknown. | `open` |
+| U-1 | A gap titled "Lambda Invoke refuses every real invocation with NotImplemented" is filed. On v1.0.338, invoking one python3.12 function returned the expected payload. Other runtimes were not tried. | `closed` |
 | U-2 | Batch jobs fail with "This emulator does not run containers". Observed 2026-11-12 on v1.0.336, not yet rechecked on the pinned v1.0.338. | `accepted` |
 | U-3 | The emulator does not evaluate IAM, bucket or key policies, so results say nothing about authorization. | `accepted` |
 | U-4 | `fidelity-tests-runner` needs `uv`, which was installed with Homebrew. 175 tests need `cdk`, `kubectl` or `ffmpeg`, which are absent. | `closed` |
-| U-5 | Outbound network connections made by the emulator were not checked. | `open` |
-| U-6 | State clearing on restart was not tested. | `open` |
+| U-5 | Sampling the container's sockets every 0.25 s during the smoke run showed no outbound connection with telemetry off. Shorter connections could be missed. | `closed` |
+| U-6 | After `docker restart`, the bucket, queue and table created before it were gone. | `closed` |
 
 ## Acceptance
 

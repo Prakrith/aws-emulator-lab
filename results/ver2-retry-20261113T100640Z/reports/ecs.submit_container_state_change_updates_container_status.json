@@ -1,0 +1,32 @@
+{
+  "check": {
+    "budget_s": 60.0,
+    "check_id": "ecs.submit-container-state-change-updates-container-status",
+    "detail": "File \"context.py\", line 123, in wrapper\n    return func(*args, **kwargs)\n  File \"client.py\", line 1094, in _make_api_call\n    raise error_class(parsed_response, operation_name)\nbotocore.exceptions.ClientError: An error occurred (RequestTimeTooSkewed) when calling the CreateCluster operation: The difference between the request time and the current time is too large",
+    "duration_ms": 77.5,
+    "kind": "target_error",
+    "service": "ecs",
+    "site": {
+      "error_code": "RequestTimeTooSkewed",
+      "error_operation": "CreateCluster",
+      "error_status": 403,
+      "exception": "ClientError",
+      "function": "_create_cluster",
+      "source": "cluster_arn = ecs.create_cluster(clusterName=name)[\"cluster\"][\"clusterArn\"]",
+      "statement": 2
+    },
+    "verdict": "error"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": true,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_submit_container_state_change_updates_container_status.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

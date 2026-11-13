@@ -1,0 +1,4 @@
+rerun of the 15 tests whose retry in results/ver2-retry-20261113T100640Z was spoiled by laptop sleep
+run: caffeinate -i python3 -I scripts/run_fidelity.py <suite-dir> results/ver2-retry2-20261113T134110Z tests.txt 1 --retry-timeout
+runner 1.0.0, suite 4df2823bafface2ada35f482c07ff6668cc078e1, emulator 1.0.338 (32b3cf3), 1 worker, nothing else running, machine kept awake
+started: 2026-11-13T13:41:15Z

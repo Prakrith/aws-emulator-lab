@@ -1,0 +1,36 @@
+{
+  "check": {
+    "budget_s": 180.0,
+    "check_id": "athena.terminate-session-idempotent-after-terminated",
+    "cleanup_detail": "cleanup failed: RuntimeError(\"1 teardown(s) failed: ClientError('An error occurred (NotImplemented) when calling the DeleteWorkGroup operation: operation DeleteWorkGroup is scaffolded but not implemented in this emulator')\"); teardown ran while the timed-out test was still running",
+    "cleanup_failed": true,
+    "cleanup_ms": 59.8,
+    "detail": "Check timed out after 180.0s",
+    "duration_ms": 180006.0,
+    "kind": "timeout",
+    "retried_after_timeout": true,
+    "service": "athena",
+    "site": {
+      "error_code": "",
+      "error_operation": "",
+      "error_status": null,
+      "exception": "Timeout",
+      "function": "_start_session_with_retry",
+      "source": "time.sleep(interval_s)",
+      "statement": 5
+    },
+    "verdict": "failed"
+  },
+  "config": {
+    "auth": "on",
+    "ca_bundle": true,
+    "credentials_file": true,
+    "no_verify_ssl": false,
+    "retry_timeout": true,
+    "timeout_s": null
+  },
+  "emulator_tls": "",
+  "endpoint": "https://127.0.0.1:9400",
+  "file": "check_terminate_session_idempotent_after_terminated.py",
+  "schema": "fidelity-tests-runner/report/v1"
+}

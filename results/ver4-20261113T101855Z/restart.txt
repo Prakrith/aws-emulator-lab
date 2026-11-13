@@ -1,0 +1,5 @@
+before restart: s3api create-bucket -> rc 0
+before restart: sqs create-queue -> rc 0
+before restart: dynamodb create-table -> rc 0
+before restart, listed counts: {'s3api': 1, 'sqs': 1, 'dynamodb': 1}
+after docker restart, listed counts: {'s3api': 0, 'sqs': 0, 'dynamodb': 0}

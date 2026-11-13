@@ -1,0 +1,3 @@
+sampled /proc/net/{tcp,tcp6,udp,udp6} in the container every 0.25 s during the run
+non-loopback, non-listener ESTABLISHED/SYN_SENT TCP and any UDP peer seen:
+none observed

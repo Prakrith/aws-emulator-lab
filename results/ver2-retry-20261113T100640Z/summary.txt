@@ -1,0 +1,15 @@
+n=27 passed=0 pass_rate=0.0000 coverage=1.0000 (27/27 scored) cleanup_failed=5
+failed: failed=3 timeout=10 target_error=14
+excluded: -
+  athena: 0/1 (0.0000)
+  batch: 0/2 (0.0000)
+  ec2: 0/3 (0.0000)
+  ecr: 0/2 (0.0000)
+  ecs: 0/5 (0.0000)
+  events: 0/1 (0.0000)
+  glue: 0/1 (0.0000)
+  rds: 0/4 (0.0000)
+  secretsmanager: 0/1 (0.0000)
+  sns: 0/3 (0.0000)
+  ssm: 0/3 (0.0000)
+  sts: 0/1 (0.0000)
